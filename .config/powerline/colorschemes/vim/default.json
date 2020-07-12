@@ -1,0 +1,154 @@
+{
+	"name": "Default color scheme",
+	"groups": {
+		"information:unimportant":  { "fg": "pywal:color7", "bg": "pywal:color3", "attrs": [] },
+		"information:additional":   { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": [] },
+		"background":               { "fg": "white", "bg": "pywal:color3", "attrs": [] },
+		"background:divider":       { "fg": "pywal:color7", "bg": "pywal:color3", "attrs": [] },
+		"mode":                     { "fg": "darkestgreen", "bg": "brightgreen", "attrs": ["bold"] },
+		"visual_range":             { "fg": "brightestorange", "bg": "darkorange", "attrs": ["bold"] },
+		"modified_indicator":       { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": ["bold"] },
+		"paste_indicator":          { "fg": "white", "bg": "mediumorange", "attrs": ["bold"] },
+		"readonly_indicator":       { "fg": "brightestred", "bg": "pywal:color1", "attrs": [] },
+		"branch_dirty":             { "fg": "brightyellow", "bg": "pywal:color5", "attrs": [] },
+		"branch:divider":           { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": [] },
+		"file_name":                { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": ["bold"] },
+		"window_title":             { "fg": "white", "bg": "pywal:color5", "attrs": [] },
+		"file_name_no_file":        { "fg": "gray9", "bg": "pywal:color5", "attrs": ["bold"] },
+		"file_vcs_status":          { "fg": "brightestred", "bg": "pywal:color1", "attrs": [] },
+		"file_vcs_status_M":        { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": [] },
+		"file_vcs_status_A":        { "fg": "brightgreen", "bg": "pywal:color5", "attrs": [] },
+		"line_percent":             { "fg": "gray9", "bg": "pywal:color5", "attrs": [] },
+		"line_percent_gradient":    { "fg": "pywal:color2", "bg": "pywal:color5", "attrs": [] },
+		"position":                 { "fg": "gray9", "bg": "pywal:color5", "attrs": [] },
+		"position_gradient":        { "fg": "green_yellow_red", "bg": "pywal:color5", "attrs": [] },
+		"line_current":             { "fg": "pywal:color2", "bg": "gray10", "attrs": ["bold"] },
+		"line_current_symbol":      { "fg": "pywal:color2", "bg": "gray10", "attrs": [] },
+		"virtcol_current_gradient": { "fg": "dark_GREEN_Orange_red", "bg": "gray10", "attrs": [] },
+		"col_current":              { "fg": "pywal:color4", "bg": "gray10", "attrs": [] },
+		"modified_buffers":         { "fg": "brightyellow", "bg": "pywal:color3", "attrs": [] },
+		"attached_clients":         { "fg": "gray8", "bg": "pywal:color3", "attrs": [] },
+		"error":                    { "fg": "brightestred", "bg": "darkred", "attrs": ["bold"] },
+		"warning":                  { "fg": "brightyellow", "bg": "darkorange", "attrs": ["bold"] },
+		"current_tag":              { "fg": "gray9", "bg": "pywal:color3", "attrs": [] },
+
+		"tab_nc:modified_indicator": { "fg": "brightyellow", "bg": "pywal:color3", "attrs": ["bold"] }
+	},
+	"mode_translations": {
+		"nc": {
+			"colors": {
+				"brightyellow": "darkorange",
+				"brightestred": "darkred",
+				"gray0": "pywal:color1",
+				"gray1": "pywal:color1",
+				"gray2": "pywal:color1",
+				"gray3": "pywal:color2",
+				"gray4": "pywal:color2",
+				"gray5": "pywal:color2",
+				"gray6": "pywal:color2",
+				"gray7": "pywal:color5",
+				"gray8": "pywal:color5",
+				"gray9": "pywal:color5",
+				"gray10": "pywal:color6",
+				"white": "pywal:color4",
+				"dark_green_gray": "pywal:color6"
+			}
+		},
+		"i": {
+			"colors": {
+				"gray0": "darkestblue",
+				"gray1": "darkestblue",
+				"gray2": "darkestblue",
+				"gray3": "darkblue",
+				"gray4": "darkblue",
+				"gray5": "darkestcyan",
+				"gray6": "darkestcyan",
+				"gray7": "darkestcyan",
+				"gray8": "mediumcyan",
+				"gray9": "mediumcyan",
+				"gray10": "mediumcyan",
+				"green_yellow_red": "pywal:color6",
+				"dark_green_gray": "light_green_gray"
+			},
+			"groups": {
+				"mode":               { "fg": "darkestcyan", "bg": "white", "attrs": ["bold"] },
+				"background:divider": { "fg": "pywal:color7", "bg": "pywal:color3", "attrs": [] },
+				"branch:divider":     { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": [] }
+			}
+		},
+		"ic": {
+			"colors": {
+				"gray0": "darkestblue",
+				"gray1": "darkestblue",
+				"gray2": "darkestblue",
+				"gray3": "darkblue",
+				"gray4": "darkblue",
+				"gray5": "darkestcyan",
+				"gray6": "darkestcyan",
+				"gray7": "darkestcyan",
+				"gray8": "mediumcyan",
+				"gray9": "mediumcyan",
+				"gray10": "mediumcyan",
+				"green_yellow_red": "pywal:color6",
+				"dark_green_gray": "light_green_gray"
+			},
+			"groups": {
+				"mode":               { "fg": "darkestcyan", "bg": "white", "attrs": ["bold"] },
+				"background:divider": { "fg": "pywal:color7", "bg": "pywal:color3", "attrs": [] },
+				"branch:divider":     { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": [] }
+			}
+		},
+		"ix": {
+			"colors": {
+				"gray0": "darkestblue",
+				"gray1": "darkestblue",
+				"gray2": "darkestblue",
+				"gray3": "darkblue",
+				"gray4": "darkblue",
+				"gray5": "darkestcyan",
+				"gray6": "darkestcyan",
+				"gray7": "darkestcyan",
+				"gray8": "mediumcyan",
+				"gray9": "mediumcyan",
+				"gray10": "mediumcyan",
+				"green_yellow_red": "pywal:color6",
+				"dark_green_gray": "light_green_gray"
+			},
+			"groups": {
+				"mode":               { "fg": "darkestcyan", "bg": "white", "attrs": ["bold"] },
+				"background:divider": { "fg": "pywal:color7", "bg": "pywal:color3", "attrs": [] },
+				"branch:divider":     { "fg": "pywal:color0", "bg": "pywal:color1", "attrs": [] }
+			}
+		},
+		"v": {
+			"groups": {
+				"mode": { "fg": "darkorange", "bg": "brightestorange", "attrs": ["bold"] }
+			}
+		},
+		"V": {
+			"groups": {
+				"mode": { "fg": "darkorange", "bg": "brightestorange", "attrs": ["bold"] }
+			}
+		},
+		"^V": {
+			"groups": {
+				"mode": { "fg": "darkorange", "bg": "brightestorange", "attrs": ["bold"] }
+			}
+		},
+		"R": {
+			"groups": {
+				"mode": { "fg": "white", "bg": "brightred", "attrs": ["bold"] }
+			}
+		},
+		"Rc": {
+			"groups": {
+				"mode": { "fg": "white", "bg": "brightred", "attrs": ["bold"] }
+			}
+		},
+		"Rx": {
+			"groups": {
+				"mode": { "fg": "white", "bg": "brightred", "attrs": ["bold"] }
+			}
+		}
+	}
+}

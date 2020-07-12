@@ -1,0 +1,1 @@
+/home/bjorn/.cache/wal/colors.hs
