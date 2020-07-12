@@ -329,7 +329,7 @@ help :: String
 help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "",
     "-- launching and killing programs",
-    "mod-Enter        Launch Alacritty",
+    "mod-Enter        Launch ST",
     "mod-p            Launch rofi",
     "mod-Shift-p      Launch gmrun",
     "mod-Shift-c      Close/kill the focused window",
