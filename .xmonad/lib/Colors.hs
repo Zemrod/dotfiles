@@ -1,1 +1,1 @@
-/home/bjorn/.cache/wal/colors.hs
+/home/zemrod/.cache/wal/colors.hs
