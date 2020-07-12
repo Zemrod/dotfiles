@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin
 EDITOR=vim
 
 # Useful Aliases (Colorization and shortcuts)

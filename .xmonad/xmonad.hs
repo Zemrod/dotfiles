@@ -58,7 +58,7 @@ myModMask       = mod4Mask
 --
 myWorkspaces    = [ "1: Dev"
                   , "2: Opera"
-                  , "3: VSCode"
+                  , "3: Doom"
                   , "4: Qemu"
                   , "5"
                   , "6"
