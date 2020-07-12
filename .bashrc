@@ -10,9 +10,9 @@ EDITOR=vim
 
 # Useful Aliases (Colorization and shortcuts)
 alias ls='exa --color=auto --group-directories-first'
-alias ll='ls --all --all --classify --long --header'
+alias ll='ls --group --all --all --classify --long --header'
 alias la='ls --all'
-alias l='ls --classify --long --header'
+alias l='ls --group --classify --long --header'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
