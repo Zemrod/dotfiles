@@ -79,6 +79,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
 
+    -- launch doom-emacs
+    , ((modm,               xK_d     ), spawn "emacs")
+
     -- launch rofi
     , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -show run")
 
@@ -330,6 +333,7 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "",
     "-- launching and killing programs",
     "mod-Enter        Launch ST",
+    "mod-d            Lauch Doom-Emacs",
     "mod-p            Launch rofi",
     "mod-Shift-p      Launch gmrun",
     "mod-Shift-c      Close/kill the focused window",
