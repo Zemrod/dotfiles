@@ -1,4 +1,4 @@
-# home
+# Dotfiles
 
 dependencies: (these deps apply to the entire repo, xmonad-config has some additional deps mentioned there)
   1. powerline - for the powerline appearance in .bashrc and fish
