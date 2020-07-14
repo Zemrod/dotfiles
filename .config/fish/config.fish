@@ -1,5 +1,5 @@
-set fish_function_path $fish_function_path "/usr/lib/python3.8/site-packages/powerline/bindings/fish"
-powerline-setup
+#set fish_function_path $fish_function_path "/usr/lib/python3.8/site-packages/powerline/bindings/fish"
+#powerline-setup
 
 # Useful Aliases (Colorization and shortcuts)
 alias ls='exa --color=auto --group-directories-first'
@@ -33,3 +33,6 @@ set fish_greeting
 
 # pywal colors for fish
 source ~/.cache/wal/colors.fish
+
+# Starship
+starship init fish | source
