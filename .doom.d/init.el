@@ -177,3 +177,14 @@
        :config
        ;;literate
        (default +bindings +smartparens))
+
+;; prolog language support
+;; ELisp file found at:
+;; https://bruda.ca/_media/emacs/prolog.el
+(autoload 'run-prolog "prolog" "Start a Prolog sub-process." t)
+(autoload 'prolog-mode "prolog" "Major mode for editing Prolog programs." t)
+(autoload 'mercury-mode "prolog" "Major mode for editing Mercury programs." t)
+(setq prolog-system 'swi)
+(setq auto-mode-alist (append '(("\\.pl$" . prolog-mode)
+                                ("\\.m$" . mercury-mode))
+                               auto-mode-alist))
