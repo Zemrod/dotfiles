@@ -1,5 +1,3 @@
--- IMPORTS
-
 import XMonad
 import XMonad.Actions.OnScreen
 import XMonad.Config.Desktop
