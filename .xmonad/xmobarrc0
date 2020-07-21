@@ -111,8 +111,12 @@ Config {
         -- time and date indicator 
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
         , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
+
+        -- bashscript for pacupdate located in '.local/bin'
         , Run Com "pacupdate" [] "" 36000
+
         , Run Com "uname" [ "-r" ] "" 3600
+
         , Run StdinReader
         ]
    }
