@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%battery% | %memory% | %swap% | %dynnetwork% | %StdinReader% }{ %disku% | %date% | %uname%"
+   , template = "%battery% | %memory% | %swap% | %dynnetwork% | %StdinReader% }{ %disku% | %pacupdate% | %date% | %uname%"
 
    -- general behavior
    , lowerOnStart =     False    -- send to bottom of window stack on start
@@ -111,6 +111,7 @@ Config {
         -- time and date indicator 
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
         , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
+        , Run Com "pacupdate" [] "" 36000
         , Run Com "uname" [ "-r" ] "" 3600
         , Run StdinReader
         ]
