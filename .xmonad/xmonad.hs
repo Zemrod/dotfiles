@@ -235,6 +235,7 @@ myLayout = avoidStruts $ spacingRaw True (Border 0 10 10 10) True (Border 10 10 
 --
 myManageHook = manageDocks <+> composeAll
     [ className =? "Opera"          --> doFloat
+    , className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
     , className =? "Gimp"           --> doFloat
     , className =? "trayer"         --> doIgnore
     , resource  =? "trayer"         --> doIgnore
