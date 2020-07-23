@@ -7,4 +7,3 @@
 
 INFO:
 1. lib/Colors.hs is a symbollink to ~/.cache/wal/colors.hs
-2. colors.sh is a symbollink to ~/.cache/wal/colors.sh
