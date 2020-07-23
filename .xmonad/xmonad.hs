@@ -6,6 +6,7 @@ import XMonad.Hooks.DynamicBars
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.IndependentScreens
+import XMonad.Layout.LayoutModifier
 import XMonad.Layout.Spacing
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
@@ -57,7 +58,7 @@ myModMask       = mod4Mask
 myWorkspaces    = [ "1: Dev"
                   , "2: Opera"
                   , "3: Doom"
-                  , "4: Qemu"
+                  , "4"
                   , "5"
                   , "6"
                   , "7"
@@ -196,6 +197,23 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 ------------------------------------------------------------------------
 -- Layouts:
 
+-- function definition for spacing
+--
+mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
+mySpacing i = spacingRaw False (Border i i i i) True (Border i i i i) True
+
+-- default tiling algorithm partitions the screen into two panes
+tiled = mySpacing 8 $ Tall nmaster delta ratio
+  where
+    -- The default number of windows in the master pane
+    nmaster = 1
+
+    -- Default proportion of screen occupied by master pane
+    ratio = 1/2
+
+    -- Percentage of screen to increment by when resizing panes
+    delta = 3/100
+
 -- You can specify and transform your layouts by modifying these values.
 -- If you change layout bindings be sure to use 'mod-shift-space' after
 -- restarting (with 'mod-q') to reset your layout state to the new
@@ -204,19 +222,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts $ spacingRaw False (Border 8 8 8 8) True (Border 8 8 8 8) True (tiled ||| Mirror tiled ||| Full)
-  where
-     -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
-
-     -- The default number of windows in the master pane
-     nmaster = 1
-
-     -- Default proportion of screen occupied by master pane
-     ratio   = 1/2
-
-     -- Percent of screen to increment by when resizing panes
-     delta   = 3/100
+myLayout = avoidStruts $ tiled ||| Mirror tiled ||| Full
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -237,6 +243,9 @@ myManageHook = manageDocks <+> composeAll
     [ className =? "Opera"          --> doFloat
     , className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
     , className =? "Gimp"           --> doFloat
+    , className =? "Opera"          --> doShift "2: Opera"
+    , className =? "Emacs"          --> doShift "3: Doom"
+    , className =? "discord"        --> doShift "8: Discord"
     , className =? "trayer"         --> doIgnore
     , resource  =? "trayer"         --> doIgnore
     , resource  =? "desktop_window" --> doIgnore
