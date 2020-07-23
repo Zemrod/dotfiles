@@ -78,6 +78,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
 
+    -- lauch alacritty
+    , ((modm .|. shiftMask, xK_Return), spawn "alacritty")
+
     -- launch doom-emacs
     , ((modm,               xK_d     ), spawn "emacs")
 
@@ -117,7 +120,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_m     ), windows W.focusMaster  )
 
     -- Swap the focused window and the master window
-    , ((modm .|. shiftMask, xK_Return), windows W.swapMaster)
+    , ((modm .|. shiftMask, xK_Tab   ), windows W.swapMaster)
 
     -- Swap the focused window with the next window
     , ((modm .|. shiftMask, xK_j     ), windows W.swapDown  )
@@ -341,6 +344,7 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "",
     "-- launching and killing programs",
     "mod-Enter        Launch ST",
+    "mod-Shift-Enter  Launch Alacritty",
     "mod-d            Lauch Doom-Emacs",
     "mod-p            Launch rofi",
     "mod-Shift-p      Launch gmrun",
@@ -351,13 +355,12 @@ help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "",
     "-- move focus up or down the window stack",
     "mod-Tab        Move focus to the next window",
-    "mod-Shift-Tab  Move focus to the previous window",
     "mod-j          Move focus to the next window",
     "mod-k          Move focus to the previous window",
     "mod-m          Move focus to the master window",
     "",
     "-- modifying the window order",
-    "mod-Shift-Return   Swap the focused window and the master window",
+    "mod-Shift-Tab      Swap the focused window and the master window",
     "mod-Shift-j        Swap the focused window with the next window",
     "mod-Shift-k        Swap the focused window with the previous window",
     "",
