@@ -1,7 +1,7 @@
-installdir=/usr/local/bin
+installdir=/usr/local
 
 install:
 	mkdir -p ${installdir}/bin
-	cp -v pacupdate ${installdir}/pacupdate
+	cp pacupdate ${installdir}/bin/pacupdate
 uninstall:
-	rm -v ${installdir}/pacupdate
+	rm ${installdir}/bin/pacupdate
