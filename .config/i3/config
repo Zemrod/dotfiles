@@ -233,7 +233,7 @@ bindsym $mod+x move workspace to output $secondary
 bindsym $mod+y move workspace to output $primary
 
 # lockscreen
-bindsym $mod+Ctrl+l exec i3lock -t -i ~/.config/i3/lockscreen/lock.png
+# bindsym $mod+Ctrl+l exec i3lock -t -i ~/.config/i3/lockscreen/lock.png
 
 # assign window to workspace x
 assign [class="Opera"] $ws2
