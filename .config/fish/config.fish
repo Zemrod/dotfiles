@@ -1,6 +1,9 @@
 #set fish_function_path $fish_function_path "/usr/lib/python3.8/site-packages/powerline/bindings/fish"
 #powerline-setup
 
+# EDITOR variable
+set EDITOR "emacs"
+
 # Useful Aliases (Colorization and shortcuts)
 alias ls='exa --color=auto --group-directories-first'
 alias ll='ls --group --all --all --classify --long --header'
