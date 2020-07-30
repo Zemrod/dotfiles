@@ -2,7 +2,7 @@
 #powerline-setup
 
 # EDITOR variable
-set EDITOR "emacs"
+set EDITOR "vim"
 
 # Useful Aliases (Colorization and shortcuts)
 alias ls='exa --color=auto --group-directories-first'
