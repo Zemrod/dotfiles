@@ -25,7 +25,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "alacritty"
+myTerminal      = "st"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -78,8 +78,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm,               xK_Return), spawn $ XMonad.terminal conf)
 
-    -- lauch alacritty
-    , ((modm .|. shiftMask, xK_Return), spawn "st")
+    -- launch alternative Terminal
+    , ((modm .|. shiftMask, xK_Return), spawn "alacritty")
 
     -- launch doom-emacs
     , ((modm,               xK_d     ), spawn "emacs")
@@ -343,8 +343,8 @@ help :: String
 help = unlines ["The default modifier key is 'alt'. Default keybindings:",
     "",
     "-- launching and killing programs",
-    "mod-Enter        Launch Alacritty",
-    "mod-Shift-Enter  Launch ST",
+    "mod-Enter        Launch primary Terminal",
+    "mod-Shift-Enter  Launch alternative Terminal",
     "mod-d            Lauch Doom-Emacs",
     "mod-p            Launch rofi",
     "mod-Shift-p      Launch gmrun",
