@@ -16,3 +16,11 @@ disabled = true
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+# Disable Python module
+[python]
+disabled = true
+
+# Disable Rust module
+[rust]
+disabled = true
