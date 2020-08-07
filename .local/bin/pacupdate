@@ -2,4 +2,4 @@
 
 update=$(checkupdates | wc -l)
 
-printf "$update updates\n"
+printf "$update packages\n"
