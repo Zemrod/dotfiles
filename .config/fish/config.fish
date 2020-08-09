@@ -4,6 +4,9 @@
 # EDITOR variable
 set EDITOR "vim"
 
+# Emacs colorisation
+alias emacs='emacs --color=always'
+
 # Useful Aliases (Colorization and shortcuts)
 alias ls='exa --color=auto --group-directories-first'
 alias ll='ls --group --all --all --classify --long --header'
