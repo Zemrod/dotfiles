@@ -6,5 +6,5 @@ nitrogen --set-scaled --random --head=1 --save
 wal -n -i $(bg.sh)
 
 # ST
-cd $HOME/packages/st
+cd $HOME/.local/src/st
 sudo make clean install
