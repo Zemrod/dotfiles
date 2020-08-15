@@ -38,6 +38,9 @@ alias service='systemctl list-unit-files --state=enabled'
 # pywal alias to prevent it from setting a wallpaper
 alias wal='wal -n'
 
+# Alias for dust (du + rust) human-readable by default
+alias du='dust'
+
 PS1='[\[\033[1;36m\]\u\[\033[1;33m\]@\h\[\033[1;34m\] \w\[\033[0m\]]\$ '
 
 # Powerline

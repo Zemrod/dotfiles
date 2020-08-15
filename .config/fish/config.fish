@@ -34,6 +34,9 @@ alias service='systemctl list-unit-files --state=enabled'
 # pywal alias to prevent it from setting a wallpaper
 alias wal='wal -n'
 
+# Alias for dust (du + rust) human-readable by default
+alias du='dust'
+
 # prevent the fish greeting
 set fish_greeting
 
