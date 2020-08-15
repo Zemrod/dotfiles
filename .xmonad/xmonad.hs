@@ -87,8 +87,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch rofi
     , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -show run")
 
-    -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+    -- launch genact
+    , ((modm .|. shiftMask, xK_p     ), spawn "st -e genact")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -338,16 +338,16 @@ defaults hs0 hs1 = def {
         startupHook        = myStartupHook
     }
 
--- | Finally, a copy of the default bindings in simple textual tabular format.
+-- | Finally, the defined bindings in simple textual tabular format.
 help :: String
-help = unlines ["The default modifier key is 'alt'. Default keybindings:",
+help = unlines ["The chosen modifier key is 'super'. Defined keybindings:",
     "",
     "-- launching and killing programs",
     "mod-Enter        Launch primary Terminal",
     "mod-Shift-Enter  Launch alternative Terminal",
     "mod-d            Lauch Doom-Emacs",
     "mod-p            Launch rofi",
-    "mod-Shift-p      Launch gmrun",
+    "mod-Shift-p      Launch genact",
     "mod-Shift-c      Close/kill the focused window",
     "mod-Space        Rotate through the available layout algorithms",
     "mod-Shift-Space  Reset the layouts on the current workSpace to default",
