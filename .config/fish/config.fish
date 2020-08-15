@@ -12,9 +12,11 @@ alias ls='exa --color=auto --group-directories-first'
 alias ll='ls --group --all --all --classify --long --header'
 alias la='ls --all'
 alias l='ls --group --classify --long --header'
-alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# alias for ripgrep
+alias grep='rg'
 
 # ip colorization
 alias ip='ip -color=auto'
