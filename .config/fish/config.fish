@@ -37,6 +37,9 @@ alias wal='wal -n'
 # Alias for dust (du + rust) human-readable by default
 alias du='dust'
 
+# a cat(1) clone with wings
+alias cat='bat'
+
 # prevent the fish greeting
 set fish_greeting
 
