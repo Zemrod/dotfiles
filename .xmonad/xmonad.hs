@@ -56,7 +56,7 @@ myModMask       = mod4Mask
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
 myWorkspaces    = [ "1: Dev"
-                  , "2: Net"
+                  , "2: Web"
                   , "3"
                   , "4"
                   , "5"
@@ -246,7 +246,7 @@ myManageHook = manageDocks <+> composeAll
     [ className =? "Opera"          --> doFloat
     , className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
     , className =? "Gimp"           --> doFloat
-    , className =? "Opera"          --> doShift "2: Net"
+    , className =? "Opera"          --> doShift "2: Web"
     , className =? "discord"        --> doShift "8: Discord"
     , className =? "trayer"         --> doIgnore
     , resource  =? "trayer"         --> doIgnore
