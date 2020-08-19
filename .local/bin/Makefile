@@ -1,5 +1,6 @@
 # The installations purpose is making the script usable for xmobar
-# withput entering the path to the script
+# without entering the path to the script
+
 
 installdir=/usr/local
 
