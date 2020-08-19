@@ -19,9 +19,6 @@ alias l='ls --group --classify --long --header'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# alias for ripgrep
-alias grep='rg'
-
 # ip colorization
 alias ip='ip -color=auto'
 
@@ -42,6 +39,12 @@ alias wal='wal -n'
 
 # alias for youtube-dl
 alias yt-mp3='youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s"'
+
+# cargo colorization
+alias cargo='cargo --color always'
+
+# alias for ripgrep
+alias grep='rg'
 
 # Alias for dust (du + rust) human-readable by default
 alias du='dust'
