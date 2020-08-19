@@ -178,6 +178,9 @@
        ;;literate
        (default +bindings +smartparens))
 
+;; Automaticaly reload buffer after changes has been done
+(global-auto-revert-mode 1)
+
 ;; prolog language support
 ;; ELisp file found at:
 ;; https://bruda.ca/_media/emacs/prolog.el
