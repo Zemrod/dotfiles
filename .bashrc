@@ -40,6 +40,9 @@ alias service='systemctl list-unit-files --state=enabled'
 # pywal alias to prevent it from setting a wallpaper
 alias wal='wal -n'
 
+# alias for youtube-dl
+alias yt-mp3='youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s"'
+
 # Alias for dust (du + rust) human-readable by default
 alias du='dust'
 
