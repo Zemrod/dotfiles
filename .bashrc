@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PATH=$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin
-EDITOR=vim
+export PATH=$PATH:$HOME/.local/bin:$HOME/.emacs.d/bin
+export EDITOR=vim
 
 # Emacs colorisation
 alias emacs='emacs --color=always'
