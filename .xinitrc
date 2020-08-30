@@ -4,5 +4,8 @@
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+# default X Cursor
+xsetroot -cursor_name left_ptr
+
 # Start xmonad
 exec xmonad
