@@ -292,8 +292,6 @@ myStartupHook = do
         spawnOnce "xset s off &"
         spawnOnce "xset dpms 0 0 0 &"
         spawnOnce "xset -dpms &"
-        spawnOnce "nitrogen --restore &"
-        spawnOnce "picom &"
         spawnOnce "wal -R &"
         spawnOnce "megasync --start &"
         spawnOnce "trayer --edge top --align right --widthtype request --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 55 --tint 0x000000 --height 17 &"
