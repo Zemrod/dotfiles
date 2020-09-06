@@ -2,7 +2,7 @@
 nitrogen --restore &
 
 # enable multiscreen
-xrandr | grep -q HDMI1 && xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1 &
+xrandr | /usr/bin/grep -q HDMI1 && xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1 &
 
 # load X resources
 xrdb ~/.Xresources
