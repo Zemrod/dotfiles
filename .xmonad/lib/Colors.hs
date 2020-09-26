@@ -1,1 +1,1 @@
-/home/zemrod/.cache/wal/colors.hs
+/home/sinon/.cache/wal/colors.hs
