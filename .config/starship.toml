@@ -3,7 +3,8 @@ add_newline = false
 
 # Character package
 [character]     
-symbol = "~>"     # The "symbol" segment is being set to "~>"
+success_symbol = "[~>](bold green)"
+error_symbol = "[~>](bold red)"
 
 # Username display
 [username]
