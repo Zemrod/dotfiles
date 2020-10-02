@@ -85,7 +85,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_d     ), spawn "emacs")
 
     -- launch rofi
-    , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -show run")
+    , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run")
 
     -- launch genact
     , ((modm .|. shiftMask, xK_p     ), spawn "st -e genact")
