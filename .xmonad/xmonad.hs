@@ -272,9 +272,9 @@ myEventHook = fullscreenEventHook
 --
 myLogHook hs0 hs1 = dynamicLogWithPP $ xmobarPP
                         { ppOutput = \x -> hPutStrLn hs0 x >> hPutStrLn hs1 x 
-                        , ppCurrent = xmobarColor Colors.color3 "" . wrap "[" "]" -- Current workspace in xmobar
-                        , ppVisible = xmobarColor Colors.color3 ""                -- Visible but not current workspace
-                        , ppHidden = xmobarColor Colors.color4 "" . wrap "*" ""   -- Hidden workspaces in xmobar
+                        , ppCurrent = xmobarColor color3 "" . wrap "[" "]" -- Current workspace in xmobar
+                        , ppVisible = xmobarColor color3 ""                -- Visible but not current workspace
+                        , ppHidden = xmobarColor color4 "" . wrap "*" ""   -- Hidden workspaces in xmobar
                         , ppSep =  "<fc=#666666> | </fc>"                     -- Separators in xmobar
                         , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"  -- Urgent workspace
                         , ppOrder  = \(ws:l:t:ex) -> [ws]++ex++[]
