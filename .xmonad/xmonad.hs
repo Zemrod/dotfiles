@@ -4,6 +4,7 @@ import XMonad.Config.Desktop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.DynamicBars
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.IndependentScreens
 import XMonad.Layout.LayoutModifier
@@ -14,10 +15,11 @@ import XMonad.Util.SpawnOnce
 import Graphics.X11.Xinerama
 import Graphics.X11.Types
 import Graphics.X11.ExtraTypes.XF86
+import Data.Monoid
+import Data.Ratio
+import System.Exit
 import System.IO
 import Colors
-import Data.Monoid
-import System.Exit
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -246,7 +248,7 @@ myManageHook = manageDocks <+> composeAll
     [ className =? "Opera"          --> doFloat
     , className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
     , className =? "Gimp"           --> doFloat
-    , className =? "Virt-manager"   --> doFloat
+    , className =? "Virt-manager"   --> doRectFloat (W.RationalRect (1 % 4) (1 % 4) (1 % 2) (1 % 2))
     , className =? "Opera"          --> doShift "2: Web"
     , className =? "discord"        --> doShift "8: Discord"
     , className =? "trayer"         --> doIgnore
