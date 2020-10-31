@@ -246,6 +246,7 @@ myManageHook = manageDocks <+> composeAll
     [ className =? "Opera"          --> doFloat
     , className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
     , className =? "Gimp"           --> doFloat
+    , className =? "Virt-manager"   --> doFloat
     , className =? "Opera"          --> doShift "2: Web"
     , className =? "discord"        --> doShift "8: Discord"
     , className =? "trayer"         --> doIgnore
