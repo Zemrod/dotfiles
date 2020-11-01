@@ -18,6 +18,7 @@ alias la='ls --all'
 alias l='ls --group --classify --long --header'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias rsync='rsync -v'
 
 # ip colorization
 alias ip='ip -color=auto'
