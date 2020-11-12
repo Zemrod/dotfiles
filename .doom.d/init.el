@@ -182,8 +182,8 @@
 (global-auto-revert-mode 1)
 
 ;; Opacity
-(set-frame-parameter (selected-frame) 'alpha '(80 . 80))
-(add-to-list 'default-frame-alist '(alpha . (80 . 80)))
+;;(set-frame-parameter (selected-frame) 'alpha '(80 . 80))
+;;(add-to-list 'default-frame-alist '(alpha . (80 . 80)))
 
 ;; prolog language support
 ;; ELisp file found at:
