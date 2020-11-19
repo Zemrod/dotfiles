@@ -9,6 +9,7 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Layout.IndependentScreens
 import XMonad.Layout.LayoutModifier
 import XMonad.Layout.Spacing
+import XMonad.Layout.Reflect
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.SpawnOnce
@@ -227,7 +228,7 @@ tiled = mySpacing 8 $ Tall nmaster delta ratio
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts $ tiled ||| Mirror tiled ||| Full
+myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Full
 
 ------------------------------------------------------------------------
 -- Window rules:
