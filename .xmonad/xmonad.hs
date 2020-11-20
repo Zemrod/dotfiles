@@ -87,6 +87,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch doom-emacs
     , ((modm,               xK_d     ), spawn "emacs")
 
+    -- launch discord
+    , ((modm .|. shiftMask, xK_d     ), spawn "discord")
+
+    -- launch brave browser
+    , ((modm,               xK_b     ), spawn "brave")
+
     -- launch rofi
     , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run")
 
@@ -347,6 +353,8 @@ help = unlines ["The chosen modifier key is 'super'. Defined keybindings:",
     "mod-Enter        Launch primary Terminal",
     "mod-Shift-Enter  Launch alternative Terminal",
     "mod-d            Lauch Doom-Emacs",
+    "mod-Shift-d      Launch Discord",
+    "mod-b            Launch Brave-Browser",
     "mod-p            Launch rofi",
     "mod-Shift-p      Launch genact",
     "mod-Shift-c      Close/kill the focused window",
