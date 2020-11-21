@@ -93,6 +93,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch brave browser
     , ((modm,               xK_b     ), spawn "brave")
 
+    -- launch sylpheed
+    , ((modm,               xK_s     ), spawn "sylpheed")
+
+    -- lauch liferea
+    , ((modm,               xK_f     ), spawn "liferea")
+
     -- launch rofi
     , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run")
 
@@ -355,6 +361,8 @@ help = unlines ["The chosen modifier key is 'super'. Defined keybindings:",
     "mod-d            Lauch Doom-Emacs",
     "mod-Shift-d      Launch Discord",
     "mod-b            Launch Brave-Browser",
+    "mod-s            Launch Sylpheed",
+    "mod-f            Launch Liferea"
     "mod-p            Launch rofi",
     "mod-Shift-p      Launch genact",
     "mod-Shift-c      Close/kill the focused window",
