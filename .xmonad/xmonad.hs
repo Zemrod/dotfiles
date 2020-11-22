@@ -13,6 +13,7 @@ import XMonad.Layout.Reflect
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.SpawnOnce
+import XMonad.Util.NamedScratchpad
 import Graphics.X11.Xinerama
 import Graphics.X11.Types
 import Graphics.X11.ExtraTypes.XF86
@@ -94,10 +95,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_b     ), spawn "brave")
 
     -- launch sylpheed
-    , ((modm,               xK_s     ), spawn "sylpheed")
+    , ((modm,               xK_s     ), namedScratchpadAction myScratchpads "mail")
 
     -- lauch liferea
-    , ((modm,               xK_f     ), spawn "liferea")
+    , ((modm,               xK_f     ), namedScratchpadAction myScratchpads "rss")
 
     -- launch rofi
     , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run")
@@ -213,6 +214,30 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     ]
 
 ------------------------------------------------------------------------
+-- Named Scratchpads
+--
+myScratchpads = [ NS "rss" spawnRssReader findRssReader manageRssReader
+                , NS "mail" spawnMail findMail manageMail
+                ]
+   where
+      spawnRssReader = "liferea"
+      findRssReader = title =? "Liferea"
+      manageRssReader = customFloating $ W.RationalRect l t w h
+            where
+              h = 0.9
+              w = 0.9
+              t = 0.95 - h
+              l = 0.95 - w
+      spawnMail = "sylpheed"
+      findMail = className =? "Sylpheed"
+      manageMail = customFloating $ W.RationalRect l t w h
+            where
+              h = 0.9
+              w = 0.9
+              t = 0.95 - h
+              l = 0.95 - w
+
+------------------------------------------------------------------------
 -- Layouts:
 
 -- function definition for spacing
@@ -257,7 +282,7 @@ myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Full
 -- To match on the WM_NAME, you can use 'title' in the same way that
 -- 'className' and 'resource' are used below.
 --
-myManageHook = manageDocks <+> composeAll
+myManageHook = namedScratchpadManageHook myScratchpads <+> manageDocks <+> composeAll
     [ className =? "Opera"          --> doFloat
     , className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
     , className =? "Gimp"           --> doFloat
@@ -362,7 +387,7 @@ help = unlines ["The chosen modifier key is 'super'. Defined keybindings:",
     "mod-Shift-d      Launch Discord",
     "mod-b            Launch Brave-Browser",
     "mod-s            Launch Sylpheed",
-    "mod-f            Launch Liferea"
+    "mod-f            Launch Liferea",
     "mod-p            Launch rofi",
     "mod-Shift-p      Launch genact",
     "mod-Shift-c      Close/kill the focused window",
