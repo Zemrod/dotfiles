@@ -330,10 +330,6 @@ myLogHook hs0 hs1 = dynamicLogWithPP $ xmobarPP
 --
 -- By default, do nothing.
 myStartupHook = do
-        spawnOnce "xset s off &"
-        spawnOnce "xset dpms 0 0 0 &"
-        spawnOnce "xset -dpms &"
-        spawnOnce "wal -R &"
         spawnOnce "nextcloud &"
         spawnOnce "trayer --edge top --align right --widthtype request --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 55 --tint 0x000000 --height 17 &"
 

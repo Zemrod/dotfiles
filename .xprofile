@@ -9,3 +9,11 @@ xrdb ~/.Xresources
 
 # start picom
 picom &
+
+# turn off screen timeout
+xset s off &
+xset dpms 0 0 0 &
+xset -dpms &
+
+# load pywal colorscheme
+wal -R &

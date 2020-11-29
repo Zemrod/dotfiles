@@ -245,6 +245,6 @@ assign [class="Virt-manager"] $ws4
 assign [class="discord"] $ws9
 
 # Autostart
-exec --no-startup-id ~/.config/i3/autostart.sh
+# exec --no-startup-id ~/.config/i3/autostart.sh
 # megasync autostart
-exec --no-startup-id megasync start
+# exec --no-startup-id megasync start
