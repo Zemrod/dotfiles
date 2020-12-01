@@ -7,6 +7,7 @@
 
 export PATH=$PATH:$HOME/.local/bin:$HOME/.config/emacs/bin
 export EDITOR=vim
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Emacs colorisation
 alias emacs='emacs --color=always'
