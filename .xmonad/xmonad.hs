@@ -88,6 +88,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch doom-emacs
     , ((modm,               xK_d     ), spawn "emacs")
 
+    -- launch VSCode
+    , ((modm,               xK_c     ), spawn "code")
+
     -- launch discord
     , ((modm .|. shiftMask, xK_d     ), spawn "discord")
 
@@ -379,7 +382,8 @@ help = unlines ["The chosen modifier key is 'super'. Defined keybindings:",
     "-- launching and killing programs",
     "mod-Enter        Launch primary Terminal",
     "mod-Shift-Enter  Launch alternative Terminal",
-    "mod-d            Lauch Doom-Emacs",
+    "mod-d            Launch Doom-Emacs",
+    "mod-c            Launch VSCode",
     "mod-Shift-d      Launch Discord",
     "mod-b            Launch Brave-Browser",
     "mod-s            Launch Sylpheed",
