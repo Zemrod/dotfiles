@@ -52,6 +52,9 @@ alias cat='bat'
 # rustic ps replacement
 alias ps='procs'
 
+# Weather report
+alias weather='curl wttr.in'
+
 # prevent the fish greeting
 set fish_greeting
 
