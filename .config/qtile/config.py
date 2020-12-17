@@ -1,9 +1,10 @@
+import os
+import subprocess
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget
+from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 
 mod = "mod4"
 terminal = "alacritty"
@@ -77,39 +78,63 @@ keys = [
     Key([],             "XF86AudioMute",
         lazy.spawn("pactl set-sink-mute @DEFAAULT_SINK@ toggle"),
         desc="mute/unmute volume"),
+
+    # floating command
+    Key([mod],          "t", lazy.window.toggle_floating(),
+        desc="toggle floating of windows"),
 ]
 
-groups = [Group(i) for i in "123456789"]
+group_names = ["1: Dev",
+               "2: Web",
+               "3",
+               "4",
+               "5",
+               "6",
+               "7",
+               "8: Discord",
+               "9"]
 
-for i in groups:
-    keys.extend([
+# groups = [Group(i) for i in "123456789"]
+
+groups = [Group(name) for name in group_names]
+
+for i, name in enumerate(group_names, 1):
+    keys.append(Key([mod],          str(i), lazy.group[name].toscreen()))
+    keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
+
+#for i in groups:
+#    keys.extend([
         # mod1 + letter of group = switch to group
-        Key([mod],          i.name, lazy.group[i.name].toscreen(),
-            desc="Switch to group {}".format(i.name)),
+#        Key([mod],          i.name, lazy.group[i.name].toscreen(),
+#            desc="Switch to group {}".format(i.name)),
 
         # mod1 + shift + letter of group = switch to & move focused window to group
         # Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
         #     desc="Switch to & move focused window to group {}".format(i.name)),
         # Or, use below if you prefer not to switch to that group.
         # mod1 + shift + letter of group = move focused window to group
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-            desc="move focused window to group {}".format(i.name)),
-    ])
+#        Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
+#            desc="move focused window to group {}".format(i.name)),
+#    ])
 
+layout_theme = {"border_width": 1,
+                "border_focus": "elacff",
+                "border_normal": "1D2330"
+                }
 layouts = [
     # layout.Stack(num_stacks=2),
     # Try more layouts by unleashing below layouts.
     # layout.Bsp(),
     # layout.Columns(),
     # layout.Matrix(),
-    # layout.MonadTall(),
+    layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
-    layout.Tile(),
+    # layout.Tile(**layout_theme),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
-    layout.Max(),
+    layout.Max(**layout_theme),
 ]
 
 widget_defaults = dict(
@@ -124,7 +149,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(hide_unused=True),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -144,7 +169,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.CurrentLayout(),
-                widget.GroupBox(),
+                widget.GroupBox(hide_unused=True),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -196,6 +221,11 @@ floating_layout = layout.Floating(float_rules=[
 ])
 auto_fullscreen = True
 focus_on_window_activation = "smart"
+
+@hook.subscribe.startup_once
+def start_up():
+    home = os.path.expanduser('~/.config/qtile/autostart.sh')
+    subprocess.call([home])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
