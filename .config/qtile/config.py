@@ -118,6 +118,7 @@ for i, name in enumerate(group_names, 1):
 #    ])
 
 layout_theme = {"border_width": 1,
+                "margin": 20,
                 "border_focus": "elacff",
                 "border_normal": "1D2330"
                 }
@@ -127,10 +128,10 @@ layouts = [
     # layout.Bsp(),
     # layout.Columns(),
     # layout.Matrix(),
-    layout.MonadTall(**layout_theme),
+    # layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
-    # layout.Tile(**layout_theme),
+    layout.Tile(**layout_theme),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
