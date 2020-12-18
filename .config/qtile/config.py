@@ -27,11 +27,11 @@ keys = [
         desc="Move window up in current stack "),
 
     # Switch window focus to other pane(s) of stack
-    Key([mod],          "space", lazy.layout.next(),
+    Key([mod],          "Tab", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
 
     # Swap panes of split stack
-    Key([mod, "shift"], "space", lazy.layout.rotate(),
+    Key([mod, "shift"], "Tab", lazy.layout.rotate(),
         desc="Swap panes of split stack"),
 
     # Toggle between split and unsplit sides of stack.
@@ -61,7 +61,7 @@ keys = [
     Key([mod, "shift"], "p", lazy.spawn("st -e genact"), desc="Launch genact"),
 
     # Toggle between different layouts as defined below
-    Key([mod],          "Tab", lazy.next_layout(),
+    Key([mod],          "space", lazy.next_layout(),
         desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
 
