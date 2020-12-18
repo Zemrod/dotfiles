@@ -111,8 +111,10 @@ groups = [Group(name) for name in group_names]
 groups = scratchpad + groups
 
 keys.extend([
-    Key([mod],         "s", lazy.group["scratchpad"].dropdown_toggle("mail")),
-    Key([mod],         "f", lazy.group["scratchpad"].dropdown_toggle("rss")),
+    Key([mod],         "s", lazy.group["scratchpad"].dropdown_toggle("mail"),
+        desc="Launch sylpheed as a scratchpad"),
+    Key([mod],         "f", lazy.group["scratchpad"].dropdown_toggle("rss"),
+        desc="Launch liferea as a scratchpad"),
 ])
 
 for i, name in enumerate(group_names, 1):
