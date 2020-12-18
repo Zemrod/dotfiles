@@ -117,10 +117,8 @@ for i, name in enumerate(group_names, 1):
 #            desc="move focused window to group {}".format(i.name)),
 #    ])
 
-layout_theme = {"border_width": 1,
-                "margin": 20,
-                "border_focus": "elacff",
-                "border_normal": "1D2330"
+layout_theme = {"border_width": 0,
+                "margin": 20
                 }
 layouts = [
     # layout.Stack(num_stacks=2),

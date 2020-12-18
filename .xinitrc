@@ -8,4 +8,4 @@
 xsetroot -cursor_name left_ptr
 
 # Start qtile
-exec xmonad
+exec qtile
