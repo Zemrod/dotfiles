@@ -3,7 +3,7 @@ import subprocess
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Screen
+from libqtile.config import Click, Drag, Group, ScratchPad, DropDown, Key, Screen
 from libqtile.lazy import lazy
 
 import colors
@@ -98,26 +98,26 @@ group_names = ["1: Dev",
 
 # groups = [Group(i) for i in "123456789"]
 
+scratchpad = [ScratchPad("scratchpad", [
+    # ScratchPad for sypheed
+    DropDown("mail", "sylpheed", opacity=1.0),
+
+    # ScratchPad for liferea
+    DropDown("rss", "liferea", opacity=1.0),
+])]
+
 groups = [Group(name) for name in group_names]
+
+groups = scratchpad + groups
+
+keys.extend([
+    Key([mod],         "s", lazy.group["scratchpad"].dropdown_toggle("mail")),
+    Key([mod],         "f", lazy.group["scratchpad"].dropdown_toggle("rss")),
+])
 
 for i, name in enumerate(group_names, 1):
     keys.append(Key([mod],          str(i), lazy.group[name].toscreen()))
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
-
-#for i in groups:
-#    keys.extend([
-        # mod1 + letter of group = switch to group
-#        Key([mod],          i.name, lazy.group[i.name].toscreen(),
-#            desc="Switch to group {}".format(i.name)),
-
-        # mod1 + shift + letter of group = switch to & move focused window to group
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-        #     desc="Switch to & move focused window to group {}".format(i.name)),
-        # Or, use below if you prefer not to switch to that group.
-        # mod1 + shift + letter of group = move focused window to group
-#        Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-#            desc="move focused window to group {}".format(i.name)),
-#    ])
 
 layout_theme = {"border_width": 0,
                 "margin": 15
@@ -155,7 +155,7 @@ screens = [
                 widget.GroupBox(active=colors.color1, inactive=colors.color4,
                                 this_current_screen_border=colors.color3, this_screen_border=colors.color4, hide_unused=True),
                 widget.Sep(foreground=colors.color3),
-                widget.Prompt(),
+                widget.Prompt(foreground=colors.color1),
                 widget.Memory(foreground=colors.color1),
                 widget.Sep(foreground=colors.color3),
                 widget.Net(foreground=colors.color1, interface="enp2s0"),
