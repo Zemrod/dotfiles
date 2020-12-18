@@ -107,7 +107,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run")
 
     -- launch genact
-    , ((modm .|. shiftMask, xK_p     ), spawn "st -e genact")
+    , ((modm .|. shiftMask, xK_p     ), spawn "st -e bpytop")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -389,7 +389,7 @@ help = unlines ["The chosen modifier key is 'super'. Defined keybindings:",
     "mod-s            Launch Sylpheed",
     "mod-f            Launch Liferea",
     "mod-p            Launch rofi",
-    "mod-Shift-p      Launch genact",
+    "mod-Shift-p      Launch bpytop",
     "mod-Shift-c      Close/kill the focused window",
     "mod-Space        Rotate through the available layout algorithms",
     "mod-Shift-Space  Reset the layouts on the current workSpace to default",

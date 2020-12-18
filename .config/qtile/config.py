@@ -58,7 +58,7 @@ keys = [
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
 
-    Key([mod, "shift"], "p", lazy.spawn("st -e genact"), desc="Launch genact"),
+    Key([mod, "shift"], "p", lazy.spawn("st -e bpytop"), desc="Launch bpytop"),
 
     # Toggle between different layouts as defined below
     Key([mod],          "space", lazy.next_layout(),
