@@ -152,13 +152,13 @@ screens = [
                 widget.Image(
                     filename="~/.config/qtile/icons/python.png"
                 ),
-                widget.GroupBox(active=colors.color3, inactive=colors.color4,
+                widget.GroupBox(active=colors.color1, inactive=colors.color4,
                                 this_current_screen_border=colors.color3, this_screen_border=colors.color4, hide_unused=True),
                 widget.Sep(foreground=colors.color3),
                 widget.Prompt(),
-                widget.Memory(foreground=colors.color3),
+                widget.Memory(foreground=colors.color1),
                 widget.Sep(foreground=colors.color3),
-                widget.Net(foreground=colors.color3, interface="enp2s0"),
+                widget.Net(foreground=colors.color1, interface="enp2s0"),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
@@ -166,9 +166,9 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Spacer(),
-                widget.Battery(foreground=colors.color3, update_interval=20),
+                widget.Battery(foreground=colors.color1, update_interval=20),
                 widget.Sep(foreground=colors.color3),
-                widget.Clock(foreground=colors.color3, format='%Y-%m-%d %a %I:%M %p'),
+                widget.Clock(foreground=colors.color1, format='%Y-%m-%d %a %I:%M %p'),
                 widget.Systray(),
             ],
             24,
@@ -182,13 +182,13 @@ screens = [
                 widget.Image(
                     filename="~/.config/qtile/icons/python.png"
                 ),
-                widget.GroupBox(active=colors.color3, inactive=colors.color4,
+                widget.GroupBox(active=colors.color1, inactive=colors.color4,
                                 this_current_screen_border=colors.color3, this_screen_border=colors.color4, hide_unused=True),
                 widget.Sep(foreground=colors.color3),
                 widget.Prompt(),
-                widget.Memory(foreground=colors.color3),
+                widget.Memory(foreground=colors.color1),
                 widget.Sep(foreground=colors.color3),
-                widget.Net(foreground=colors.color3, interface="enp2s0"),
+                widget.Net(foreground=colors.color1, interface="enp2s0"),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
@@ -196,7 +196,7 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Spacer(),
-                widget.Clock(foreground=colors.color3, format='%Y-%m-%d %a %I:%M %p'),
+                widget.Clock(foreground=colors.color1, format='%Y-%m-%d %a %I:%M %p'),
             ],
             24,
             background=colors.background,
