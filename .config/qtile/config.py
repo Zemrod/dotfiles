@@ -103,10 +103,10 @@ scratchpad = [ScratchPad("scratchpad", [
     DropDown("mail", "sylpheed", opacity=1.0),
 
     # ScratchPad for liferea
-    DropDown("rss", "liferea", opacity=1.0),
+    DropDown("rss", "liferea", height=0.7, opacity=1.0),
 
     # Scratchpad for bpytop
-    DropDown("res", "st -e bpytop", opacity=1.0),
+    DropDown("res", "st -e bpytop", height=0.7, opacity=1.0),
 ])]
 
 groups = [Group(name) for name in group_names]
