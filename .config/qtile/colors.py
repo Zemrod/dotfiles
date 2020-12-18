@@ -1,1 +1,0 @@
-/home/sinon/.cache/wal/colors.py

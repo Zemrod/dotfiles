@@ -6,7 +6,7 @@ from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, ScratchPad, DropDown, Key, Screen
 from libqtile.lazy import lazy
 
-import colors
+import colors # symlink to $HOME/.cache/wal/colors.py
 
 mod = "mod4"
 terminal = "alacritty"
