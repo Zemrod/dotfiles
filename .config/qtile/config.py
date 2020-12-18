@@ -6,6 +6,8 @@ from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Screen
 from libqtile.lazy import lazy
 
+import colors
+
 mod = "mod4"
 terminal = "alacritty"
 altterminal = "st"
@@ -118,7 +120,7 @@ for i, name in enumerate(group_names, 1):
 #    ])
 
 layout_theme = {"border_width": 0,
-                "margin": 20
+                "margin": 15
                 }
 layouts = [
     # layout.Stack(num_stacks=2),
@@ -147,39 +149,51 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(hide_unused=True),
+                widget.Image(
+                    filename="~/.config/qtile/icons/python.png"
+                ),
+                widget.GroupBox(active=colors.color3, inactive=colors.color4,
+                                this_current_screen_border=colors.color3, this_screen_border=colors.color4, hide_unused=True),
+                widget.Sep(foreground=colors.color3),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.Net(foreground=colors.color3, interface="enp2s0"),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.Spacer(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
                 widget.Systray(),
             ],
             24,
+            background=colors.background,
             opacity=0.8,
         ),
     ),
     Screen(
         top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(hide_unused=True),
+                widget.Image(
+                    filename="~/.config/qtile/icons/python.png"
+                ),
+                widget.GroupBox(active=colors.color3, inactive=colors.color4,
+                                this_current_screen_border=colors.color3, this_screen_border=colors.color4, hide_unused=True),
+                widget.Sep(foreground=colors.color3),
                 widget.Prompt(),
-                widget.WindowName(),
+                widget.Net(foreground=colors.color3, interface="enp2s0"),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.Spacer(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
             ],
             24,
+            background=colors.background,
             opacity=0.8,
         ),
     ),
