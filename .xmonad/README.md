@@ -6,4 +6,4 @@
 5. ubuntu-font-family
 
 INFO:
-1. `import Colors` only works if the symlink `lib/Colors.hs to ~/.cache/wal/colors.hs` exists
+1. `import Colors` only works if the symlink `$HOME/.xmonad/lib/Colors.hs -> $HOME/.cache/wal/colors.hs` exists
