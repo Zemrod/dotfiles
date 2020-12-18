@@ -70,13 +70,13 @@ keys = [
 
     # Audio
     Key([],             "XF86AudioRaiseVolume",
-        lazy.spawn("pactl set-sink-volume @DEFAAULT_SINK@ +10%"),
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +10%"),
         desc="raise volume"),
     Key([],             "XF86AudioLowerVolume",
-        lazy.spawn("pactl set-sink-volume @DEFAAULT_SINK@ -10%"),
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -10%"),
         desc="lower volume"),
     Key([],             "XF86AudioMute",
-        lazy.spawn("pactl set-sink-mute @DEFAAULT_SINK@ toggle"),
+        lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"),
         desc="mute/unmute volume"),
 
     # floating command
