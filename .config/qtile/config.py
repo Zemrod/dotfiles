@@ -58,7 +58,7 @@ keys = [
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
 
-    Key([mod, "shift"], "p", lazy.spawn("st -e bpytop"), desc="Launch bpytop"),
+    # Key([mod, "shift"], "p", lazy.spawn("st -e bpytop"), desc="Launch bpytop"),
 
     # Toggle between different layouts as defined below
     Key([mod],          "space", lazy.next_layout(),
@@ -104,6 +104,9 @@ scratchpad = [ScratchPad("scratchpad", [
 
     # ScratchPad for liferea
     DropDown("rss", "liferea", opacity=1.0),
+
+    # Scratchpad for bpytop
+    DropDown("res", "st -e bpytop", opacity=1.0),
 ])]
 
 groups = [Group(name) for name in group_names]
@@ -111,10 +114,12 @@ groups = [Group(name) for name in group_names]
 groups = scratchpad + groups
 
 keys.extend([
-    Key([mod],         "s", lazy.group["scratchpad"].dropdown_toggle("mail"),
-        desc="Launch sylpheed as a scratchpad"),
-    Key([mod],         "f", lazy.group["scratchpad"].dropdown_toggle("rss"),
-        desc="Launch liferea as a scratchpad"),
+    Key([mod],          "s", lazy.group["scratchpad"].dropdown_toggle("mail"),
+        desc="Launch sylpheed"),
+    Key([mod],          "f", lazy.group["scratchpad"].dropdown_toggle("rss"),
+        desc="Launch liferea"),
+    Key([mod, "shift"], "p", lazy.group["scratchpad"].dropdown_toggle("res"),
+        desc="Launch bpytop"),
 ])
 
 for i, name in enumerate(group_names, 1):
