@@ -6,4 +6,4 @@
 5. ubuntu-font-family
 
 INFO:
-1. lib/Colors.hs is a symbollink to ~/.cache/wal/colors.hs
+1. 'import Colors' only works if the symlink 'lib/Colors.hs to ~/.cache/wal/colors.hs' exists
