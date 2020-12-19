@@ -173,7 +173,7 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Spacer(),
-                widget.GenPollText(func=lambda: subprocess.check_output("pacupdate").decode("utf-8"), update_interval=30,
+                widget.GenPollText(func=lambda: subprocess.check_output("pacupdate").decode("utf-8"), update_interval=360,
                                    foreground=colors.color1),
                 widget.Sep(foreground=colors.color3),
                 widget.GenPollText(func=lambda: subprocess.check_output("syspart").decode("utf-8"), update_interval=10,
