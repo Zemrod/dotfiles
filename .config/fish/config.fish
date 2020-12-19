@@ -25,6 +25,9 @@ alias orphan='sudo pacman -Rns (pacman -Qtdq)'
 # Pacman cache clear
 alias cache='sudo paccache --remove --keep 1'
 
+# Pacman cache clean
+alias cache-clean='sudo paccache --remove --keep 0'
+
 # Pacman cache clear all uninstalled
 alias cache-uninstalled='sudo paccache --remove --uninstalled --keep 0'
 
