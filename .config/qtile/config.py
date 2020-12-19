@@ -194,7 +194,8 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(
-                    filename="~/.config/qtile/icons/python.png"
+                    filename="~/.config/qtile/icons/python.png",
+                    mouse_callbacks = {"Button1": lambda qtile: qtile.cmd_spawn("code .config/qtile/config.py")}
                 ),
                 widget.GroupBox(active=colors.color1, inactive=colors.color4,
                                 this_current_screen_border=colors.color3, this_screen_border=colors.color4, hide_unused=True),
