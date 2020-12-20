@@ -10,6 +10,9 @@ xrdb ~/.Xresources
 # start picom
 picom &
 
+# start lxsession
+lxsession &
+
 # turn off screen timeout
 xset s off &
 xset dpms 0 0 0 &
