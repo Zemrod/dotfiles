@@ -59,7 +59,7 @@ alias ps='procs'
 alias weather='curl wttr.in'
 
 # sqlite alias
-alias sqlite3='sqlite3 -header -table'
+alias sqlite3='sqlite3 -header -box'
 
 # prevent the fish greeting
 set fish_greeting
