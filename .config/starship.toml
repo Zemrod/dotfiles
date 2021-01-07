@@ -10,6 +10,11 @@ error_symbol = "[~>](bold red)"
 [username]
 show_always = true
 
+# hostname module
+[hostname]
+ssh_only = true
+style = "bold blue"
+
 # line break in prompt
 [line_break]
 disabled = true
