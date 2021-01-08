@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-xrandr --output HDMI1 --off
+secondary=HDMI1
+
+xrandr --output ${secondary} --off

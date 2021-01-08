@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
-xrandr --output eDP1 --auto --output HDMI1 --auto --right-of eDP1
+primary=eDP1
+secondary=HDMI1
+
+xrandr --output ${primary} --auto --output ${secondary} --auto --right-of ${primary}
 
 nitrogen --restore 2>/dev/null
