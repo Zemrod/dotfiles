@@ -2,4 +2,4 @@
 
 from sys import byteorder
 
-print(byteorder + " endian")
+print(byteorder + " endian", end='')
