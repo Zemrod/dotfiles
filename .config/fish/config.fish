@@ -55,6 +55,20 @@ alias cat='bat'
 # rustic ps replacement
 alias ps='procs'
 
+### lolcate related aliases
+# query the music database
+set MUSIC_DB Music
+alias music='lolcate --db $MUSIC_DB --type audio'
+
+function play
+	mpv --playlist=(music $1 | psub)
+end
+
+function play_shuf
+	mpv --playlist=(music $1 | shuf | psub)
+end
+###
+
 # Weather report
 alias weather='curl wttr.in'
 

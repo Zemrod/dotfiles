@@ -60,6 +60,15 @@ alias cat='bat'
 # rustic ps replacement
 alias ps='procs'
 
+### lolcate related aliases
+# query the music database
+MUSIC_DB=Music
+alias music='lolcate --db $MUSIC_DB --type audio'
+
+play(){ mpv --playlist=<(music $1); }
+play_shuf(){ mpv --playlist=<(music $1 | shuf); }
+###
+
 # Weather report
 alias wather='curl wttr.in'
 
