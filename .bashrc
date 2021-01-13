@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/.config/emacs/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/binary:$HOME/.config/emacs/bin
 export EDITOR=vim
 export QT_QPA_PLATFORMTHEME=qt5ct
 
