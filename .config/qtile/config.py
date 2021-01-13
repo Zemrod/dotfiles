@@ -100,7 +100,7 @@ group_names = ["1: Dev",
 
 scratchpad = [ScratchPad("scratchpad", [
     # ScratchPad for sypheed
-    DropDown("mail", "sylpheed", opacity=1.0),
+    DropDown("mail", "sylpheed", height=0.7, opacity=1.0),
 
     # ScratchPad for liferea
     DropDown("rss", "liferea", height=0.7, opacity=1.0),
