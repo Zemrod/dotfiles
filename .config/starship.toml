@@ -25,8 +25,8 @@ disabled = true
 
 # Disable Python module
 [python]
-disabled = true
+disabled = false
 
 # Disable Rust module
 [rust]
-disabled = true
+disabled = false
