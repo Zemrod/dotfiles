@@ -102,8 +102,8 @@ scratchpad = [ScratchPad("scratchpad", [
     # ScratchPad for sypheed
     DropDown("mail", "trojita", height=0.7, opacity=1.0),
 
-    # ScratchPad for liferea
-    DropDown("rss", "liferea", height=0.7, opacity=1.0),
+    # ScratchPad for quiterss
+    DropDown("rss", "quiterss", height=0.7, opacity=1.0),
 
     # Scratchpad for bpytop
     DropDown("res", "st -e bpytop", height=0.7, opacity=1.0),
@@ -117,7 +117,7 @@ keys.extend([
     Key([mod],          "s", lazy.group["scratchpad"].dropdown_toggle("mail"),
         desc="Launch trojita"),
     Key([mod],          "f", lazy.group["scratchpad"].dropdown_toggle("rss"),
-        desc="Launch liferea"),
+        desc="Launch quiterss"),
     Key([mod, "shift"], "p", lazy.group["scratchpad"].dropdown_toggle("res"),
         desc="Launch bpytop"),
 ])
