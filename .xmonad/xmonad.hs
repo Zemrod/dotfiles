@@ -97,10 +97,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch brave browser
     , ((modm,               xK_b     ), spawn "brave")
 
-    -- launch sylpheed
+    -- launch trojita
     , ((modm,               xK_s     ), namedScratchpadAction myScratchpads "mail")
 
-    -- lauch liferea
+    -- lauch quiterss
     , ((modm,               xK_f     ), namedScratchpadAction myScratchpads "rss")
 
     -- launch rofi
@@ -223,16 +223,16 @@ myScratchpads = [ NS "rss" spawnRssReader findRssReader manageRssReader
                 , NS "mail" spawnMail findMail manageMail
                 ]
    where
-      spawnRssReader = "liferea"
-      findRssReader = title =? "Liferea"
+      spawnRssReader = "quiterss"
+      findRssReader = title =? "QuiteRss"
       manageRssReader = customFloating $ W.RationalRect l t w h
             where
               h = 0.9
               w = 0.9
               t = 0.95 - h
               l = 0.95 - w
-      spawnMail = "sylpheed"
-      findMail = className =? "Sylpheed"
+      spawnMail = "trojita"
+      findMail = className =? "trojita"
       manageMail = customFloating $ W.RationalRect l t w h
             where
               h = 0.9
