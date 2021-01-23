@@ -99,7 +99,7 @@ group_names = ["1: Dev",
 # groups = [Group(i) for i in "123456789"]
 
 scratchpad = [ScratchPad("scratchpad", [
-    # ScratchPad for sypheed
+    # ScratchPad for trojita
     DropDown("mail", "trojita", height=0.7, opacity=1.0),
 
     # ScratchPad for quiterss
