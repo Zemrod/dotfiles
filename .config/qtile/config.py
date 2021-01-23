@@ -100,7 +100,7 @@ group_names = ["1: Dev",
 
 scratchpad = [ScratchPad("scratchpad", [
     # ScratchPad for sypheed
-    DropDown("mail", "sylpheed", height=0.7, opacity=1.0),
+    DropDown("mail", "trojita", height=0.7, opacity=1.0),
 
     # ScratchPad for liferea
     DropDown("rss", "liferea", height=0.7, opacity=1.0),
@@ -115,7 +115,7 @@ groups = scratchpad + groups
 
 keys.extend([
     Key([mod],          "s", lazy.group["scratchpad"].dropdown_toggle("mail"),
-        desc="Launch sylpheed"),
+        desc="Launch trojita"),
     Key([mod],          "f", lazy.group["scratchpad"].dropdown_toggle("rss"),
         desc="Launch liferea"),
     Key([mod, "shift"], "p", lazy.group["scratchpad"].dropdown_toggle("res"),
