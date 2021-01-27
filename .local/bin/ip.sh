@@ -8,10 +8,10 @@ elif ip a | grep inet | grep -q wlan0;
 then
 	dev=wlan0
 else
-	dev=none
+	dev="none"
 fi
 
-if $dev = "none";
+if [ $dev = "none" ]
 then
 	printf " no connection"
 else
