@@ -138,7 +138,7 @@ layouts = [
     # layout.MonadTall(**layout_theme),
     # layout.MonadWide(),
     # layout.RatioTile(),
-    layout.Tile(**layout_theme),
+    layout.Tile(**layout_theme, ratio=0.5),
     # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
