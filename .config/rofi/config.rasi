@@ -1,5 +1,5 @@
 configuration {
-	theme: "~/.cache/wal/colors-rofi-dark.rasi";
+	theme: "/usr/share/rofi/themes/sidebar.rasi";
 	font: "Ubuntu Mono 12";
 	sorting-method: "fzf";
 }
