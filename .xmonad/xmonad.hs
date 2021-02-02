@@ -334,7 +334,7 @@ myLogHook hs0 hs1 = dynamicLogWithPP $ xmobarPP
 -- By default, do nothing.
 myStartupHook = do
         spawnOnce "nextcloud &"
-        spawnOnce "trayer --edge top --align right --widthtype request --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 55 --tint 0x000000 --height 17 &"
+        spawnOnce "trayer --edge top --align right --width 4 --SetDockType true --SetPartialStrut true --expand true --transparent true --alpha 55 --tint 0x000000 --height 19 &"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.

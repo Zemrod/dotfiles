@@ -5,7 +5,7 @@ Config {
    , additionalFonts = [ "xft:FontAwesome:size=11" ]
    , bgColor =      "black"
    , fgColor =      "#646464"
-   , position =     TopW L 97
+   , position =     TopW L 96
    , alpha = 200
 
    -- layout
