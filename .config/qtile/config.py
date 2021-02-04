@@ -107,6 +107,9 @@ scratchpad = [ScratchPad("scratchpad", [
 
     # Scratchpad for bpytop
     DropDown("res", "st -e bpytop", height=0.7, opacity=1.0),
+
+    # ScratchPad for taking notes
+    DropDown("note", "st -e vim /tmp/note", height=0.7, opacity=1.0),
 ])]
 
 groups = [Group(name) for name in group_names]
@@ -120,6 +123,8 @@ keys.extend([
         desc="Launch quiterss"),
     Key([mod, "shift"], "p", lazy.group["scratchpad"].dropdown_toggle("res"),
         desc="Launch bpytop"),
+    Key([mod, "shift"], "n", lazy.group["scratchpad"].dropdown_toggle("note"),
+        desc="Launch a notepad in ST"),
 ])
 
 for i, name in enumerate(group_names, 1):
