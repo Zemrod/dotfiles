@@ -167,7 +167,7 @@ screens = [
                     mouse_callbacks = {"Button1": lambda qtile: qtile.cmd_spawn("code .config/qtile/config.py")}
                 ),
                 widget.GroupBox(active=colors.color1, inactive=colors.color5,
-                                this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=True),
+                                this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
                 widget.Sep(foreground=colors.color5),
                 widget.Prompt(foreground=colors.color1),
                 widget.Memory(foreground=colors.color1),
@@ -210,7 +210,7 @@ screens = [
                     mouse_callbacks = {"Button1": lambda qtile: qtile.cmd_spawn("code .config/qtile/config.py")}
                 ),
                 widget.GroupBox(active=colors.color1, inactive=colors.color5,
-                                this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=True),
+                                this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
                 widget.Sep(foreground=colors.color5),
                 widget.Prompt(),
                 widget.Memory(foreground=colors.color1),
