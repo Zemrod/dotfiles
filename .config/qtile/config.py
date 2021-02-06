@@ -86,15 +86,13 @@ keys = [
         desc="toggle floating of windows"),
 ]
 
-group_names = ["1: Dev",
-               "2: Web",
-               "3",
-               "4",
-               "5",
-               "6",
-               "7",
-               "8: Discord",
-               "9"]
+group_names = [
+    "DEV",
+    "WEB",
+    "MAIL",
+    "CHAT",
+    "ETC"
+]
 
 # groups = [Group(i) for i in "123456789"]
 
@@ -223,6 +221,9 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Spacer(),
+                widget.GenPollText(func=lambda: subprocess.check_output("pacupdate.sh").decode("utf-8"), update_interval=360,
+                                   foreground=colors.color1),
+                widget.Sep(foreground=colors.color5),
                 widget.GenPollText(func=lambda: subprocess.check_output("syspart.sh").decode("utf-8"), update_interval=10,
                                    foreground=colors.color1),
                 widget.Sep(foreground=colors.color5),
