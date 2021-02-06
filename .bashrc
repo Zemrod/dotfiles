@@ -5,10 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/binary:$HOME/.config/emacs/bin
-export EDITOR=vim
-export QT_QPA_PLATFORMTHEME=qt5ct
-
 # Emacs colorisation
 alias emacs='emacs --color=always'
 
@@ -68,12 +64,6 @@ alias music='lolcate --db $MUSIC_DB --type audio'
 play(){ mpv --playlist=<(music $1); }
 play_shuf(){ mpv --playlist=<(music $1 | shuf); }
 ###
-
-# Weather report
-alias wather='curl wttr.in'
-
-# sqlite alias
-alias sqlite3='sqlite3 -header -box'
 
 PS1='[\[\033[1;36m\]\u\[\033[1;33m\]@\h\[\033[1;34m\] \w\[\033[0m\]]\$ '
 

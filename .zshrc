@@ -103,9 +103,9 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/binary:$HOME/.config/emacs/bin
-export EDITOR=vim
-export QT_QPA_PLATFORMTHEME=qt5ct
+#export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/binary:$HOME/.config/emacs/bin
+#export EDITOR=vim
+#export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Emacs colorisation
 alias emacs='emacs --color=always'
@@ -166,12 +166,6 @@ alias music='lolcate --db $MUSIC_DB --type audio'
 play(){ mpv --playlist=<(music $1); }
 play_shuf(){ mpv --playlist=<(music $1 | shuf); }
 ###
-
-# Weather report
-alias wather='curl wttr.in'
-
-# sqlite alias
-alias sqlite3='sqlite3 -header -box'
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
