@@ -89,6 +89,7 @@ keys = [
 group_names = [
     "DEV",
     "WEB",
+    "VIRT",
     "MAIL",
     "CHAT",
     "ETC"
