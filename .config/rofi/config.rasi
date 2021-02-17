@@ -1,5 +1,5 @@
 configuration {
-	theme: "/usr/share/rofi/themes/sidebar.rasi";
+	theme: "automata.rasi";
 	font: "Ubuntu Mono 12";
 	sorting-method: "fzf";
 }
