@@ -11,7 +11,7 @@ import colors # symlink to $HOME/.cache/wal/colors.py
 mod = "mod4"
 terminal = "alacritty"
 altterminal = "st"
-rofi = "rofi -disable-history -case-sensitive -sort -show run"
+rofi = "rofi -disable-history -case-sensitive -sort -show run ssh window"
 
 keys = [
     # Switch between windows in current stack pane
