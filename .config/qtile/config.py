@@ -163,7 +163,7 @@ screens = [
             [
                 widget.Image(
                     filename="~/.config/qtile/icons/python.png",
-                    mouse_callbacks = {"Button1": lambda qtile: qtile.cmd_spawn("code .config/qtile/config.py")}
+                    mouse_callbacks = {"Button1": lambda: lazy.spawn("code .config/qtile/config.py")}
                 ),
                 widget.GroupBox(active=colors.color1, inactive=colors.color5,
                                 this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
@@ -206,7 +206,7 @@ screens = [
             [
                 widget.Image(
                     filename="~/.config/qtile/icons/python.png",
-                    mouse_callbacks = {"Button1": lambda qtile: qtile.cmd_spawn("code .config/qtile/config.py")}
+                    mouse_callbacks = {"Button1": lambda: lazy.spawn("code .config/qtile/config.py")}
                 ),
                 widget.GroupBox(active=colors.color1, inactive=colors.color5,
                                 this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
