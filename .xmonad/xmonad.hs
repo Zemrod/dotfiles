@@ -59,15 +59,12 @@ myModMask       = mod4Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = [ "1: Dev"
-                  , "2: Web"
-                  , "3"
-                  , "4"
-                  , "5"
-                  , "6"
-                  , "7"
-                  , "8: Discord"
-                  , "9: Spotify"]
+myWorkspaces    = [ "DEV"
+                  , "WEB"
+                  , "VIRT"
+                  , "MAIL"
+                  , "CHAT"
+                  , "ETC"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -104,7 +101,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_f     ), namedScratchpadAction myScratchpads "rss")
 
     -- launch rofi
-    , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run")
+    , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run window ssh")
 
     -- launch genact
     , ((modm .|. shiftMask, xK_p     ), spawn "st -e bpytop")
@@ -286,12 +283,10 @@ myLayout = avoidStruts $ tiled ||| reflectHoriz tiled ||| Full
 -- 'className' and 'resource' are used below.
 --
 myManageHook = namedScratchpadManageHook myScratchpads <+> manageDocks <+> composeAll
-    [ className =? "Opera"          --> doFloat
-    , className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
+    [ className =? "Movie-monad"    --> doFloat -- video player written in haskell (hosted on github)
     , className =? "Gimp"           --> doFloat
-    , className =? "Virt-manager"   --> doRectFloat (W.RationalRect (1 % 4) (1 % 4) (1 % 2) (1 % 2))
-    , className =? "Opera"          --> doShift "2: Web"
-    , className =? "discord"        --> doShift "8: Discord"
+    , className =? "Virt-manager"   --> doShift "VIRT"
+    , className =? "discord"        --> doShift "CHAT"
     , className =? "trayer"         --> doIgnore
     , resource  =? "trayer"         --> doIgnore
     , resource  =? "desktop_window" --> doIgnore
@@ -316,11 +311,11 @@ myEventHook = fullscreenEventHook
 --
 myLogHook hs0 hs1 = dynamicLogWithPP $ xmobarPP
                         { ppOutput = \x -> hPutStrLn hs0 x >> hPutStrLn hs1 x 
-                        , ppCurrent = xmobarColor color3 "" . wrap "[" "]" -- Current workspace in xmobar
-                        , ppVisible = xmobarColor color3 ""                -- Visible but not current workspace
-                        , ppHidden = xmobarColor color4 "" . wrap "*" ""   -- Hidden workspaces in xmobar
-                        , ppSep =  "<fc=#666666> | </fc>"                     -- Separators in xmobar
-                        , ppUrgent = xmobarColor "#C45500" "" . wrap "!" "!"  -- Urgent workspace
+                        , ppCurrent = xmobarColor color1 "" . wrap "[" "]" -- Current workspace in xmobar
+                        , ppVisible = xmobarColor color1 ""                -- Visible but not current workspace
+                        , ppHidden = xmobarColor color1 "" . wrap "*" ""   -- Hidden workspaces in xmobar
+                        , ppHiddenNoWindows = xmobarColor color5 ""        -- Hidden workspaces (no windows)
+                        , ppSep = color5                                   -- Separators in xmobar
                         , ppOrder  = \(ws:l:t:ex) -> [ws]++ex++[]
                         }
 
