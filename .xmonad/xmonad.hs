@@ -101,7 +101,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_f     ), namedScratchpadAction myScratchpads "rss")
 
     -- launch rofi
-    , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show run window ssh")
+    , ((modm,               xK_p     ), spawn "rofi -disable-history -case-sensitive -sort -show combi")
 
     -- launch genact
     , ((modm .|. shiftMask, xK_p     ), spawn "st -e bpytop")
