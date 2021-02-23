@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% | %battery% | %memory% | %dynnetwork% }{ %disku% | %date% | %uname%"
+   , template = "%StdinReader% | %battery% | %memory% | %dynnetwork% }{ %disku% | %date% | <fn=1></fn> %uname%"
 
    -- general behavior
    , lowerOnStart =     False    -- send to bottom of window stack on start
@@ -80,7 +80,7 @@ Config {
                              , "--high"     , "darkred"
                              ] 10
         -- Disk Usage
-        , Run DiskU          [("/", "Sys: <used>/<size>")]
+        , Run DiskU          [("/", "<fn=1>\xf0a0</fn> <used>/<size>")]
                              [ "--Low"      , "20"
                              , "--High"     , "50"
                              , "-m"         , "1"
