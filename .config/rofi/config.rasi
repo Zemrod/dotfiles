@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,ssh,run,combi";
+	modi: "combi";
 	theme: "/usr/share/rofi/themes/sidebar.rasi";
 	font: "Ubuntu Mono 12";
 	sorting-method: "fzf";
