@@ -153,6 +153,9 @@ alias grep='rg'
 # Alias for dust (du + rust) human-readable by default
 alias du='dust'
 
+# Alias for pydf
+alias df='pydf -h'
+
 # a cat(1) clone with wings
 alias cat='bat'
 
