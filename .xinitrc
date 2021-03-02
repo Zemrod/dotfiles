@@ -7,5 +7,5 @@
 # default X Cursor
 xsetroot -cursor_name left_ptr
 
-# Start xmonad
-exec xmonad
+# Start qtile
+exec qtile
