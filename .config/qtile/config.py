@@ -105,10 +105,10 @@ scratchpad = [ScratchPad("scratchpad", [
     DropDown("rss", "quiterss", height=0.7, opacity=1.0),
 
     # Scratchpad for bpytop
-    DropDown("res", "st -e bpytop", height=0.7, opacity=1.0),
+    DropDown("res", terminal + " -e bpytop", height=0.7, opacity=1.0),
 
     # ScratchPad for taking notes
-    DropDown("note", "st -e vim /tmp/note", height=0.7, opacity=1.0),
+    DropDown("note", terminal + " -e vim /tmp/note", height=0.7, opacity=1.0),
 ])]
 
 groups = [Group(name) for name in group_names]
