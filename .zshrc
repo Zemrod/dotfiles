@@ -178,3 +178,5 @@ play_shuf(){ mpv --playlist=<(music $1 | shuf); }
 
 # To add support for TTYs this line can be optionally added.
 # source ~/.cache/wal/colors-tty.sh
+
+eval "$(starship init zsh)"
