@@ -6,6 +6,10 @@ add_newline = false
 success_symbol = "[\u03BB](bold green)"
 error_symbol = "[\u03BB](bold red)"
 
+# git branch module
+[git_branch]
+symbol = ""
+
 # Username display
 [username]
 show_always = true
@@ -25,8 +29,8 @@ disabled = true
 
 # Disable Python module
 [python]
-disabled = false
+disabled = true
 
 # Disable Rust module
 [rust]
-disabled = false
+disabled = true
