@@ -15,5 +15,5 @@ if [ $dev = "none" ]
 then
 	printf " no connection"
 else
-	printf " $(ip a | grep inet | grep $dev | rawk -f 2 | rawk -s '/' -f 1)"
+	printf " $(ip a | grep inet | grep $dev | awk '{ print $2 }' | awk -F'/' '{ print $1 }')"
 fi
