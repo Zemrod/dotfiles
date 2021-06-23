@@ -4,4 +4,4 @@
 
 disk=/dev/sda3
 
-printf " $(df -h -B M | grep ${disk} | awk '{print $3}')/$(df -h -B M | grep ${disk} | awk '{print $2}')"
+printf " $(df -h -B M | grep $disk | awk '{print $3}')/$(df -h -B M | grep $disk | awk '{print $2}')"
