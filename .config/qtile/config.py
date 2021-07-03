@@ -98,12 +98,6 @@ group_names = [
 # groups = [Group(i) for i in "123456789"]
 
 scratchpad = [ScratchPad("scratchpad", [
-    # ScratchPad for trojita
-    DropDown("mail", "trojita", height=0.7, opacity=1.0),
-
-    # ScratchPad for quiterss
-    DropDown("rss", "quiterss", height=0.7, opacity=1.0),
-
     # Scratchpad for bpytop
     DropDown("res", terminal + " -e bpytop", height=0.7, opacity=1.0),
 
@@ -116,10 +110,6 @@ groups = [Group(name) for name in group_names]
 groups = scratchpad + groups
 
 keys.extend([
-    Key([mod],          "s", lazy.group["scratchpad"].dropdown_toggle("mail"),
-        desc="Launch trojita"),
-    Key([mod],          "f", lazy.group["scratchpad"].dropdown_toggle("rss"),
-        desc="Launch quiterss"),
     Key([mod, "shift"], "p", lazy.group["scratchpad"].dropdown_toggle("res"),
         desc="Launch bpytop"),
     Key([mod, "shift"], "n", lazy.group["scratchpad"].dropdown_toggle("note"),
