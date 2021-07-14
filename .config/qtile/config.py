@@ -152,7 +152,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(
-                    filename="~/.config/qtile/icons/python.png",
+                    filename="~/.config/qtile/icons/arch.svg",
                 ),
                 widget.GroupBox(active=colors.color1, inactive=colors.color5,
                                 this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
@@ -194,7 +194,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.Image(
-                    filename="~/.config/qtile/icons/python.png",
+                    filename="~/.config/qtile/icons/arch.svg",
                 ),
                 widget.GroupBox(active=colors.color1, inactive=colors.color5,
                                 this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
