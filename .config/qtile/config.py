@@ -58,6 +58,8 @@ keys = [
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
 
+    Key([],             "Print", lazy.spawn("flameshot gui"), desc="Start Screenshot selection"),
+
     # Key([mod, "shift"], "p", lazy.spawn("st -e bpytop"), desc="Launch bpytop"),
 
     # Toggle between different layouts as defined below
