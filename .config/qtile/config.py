@@ -122,8 +122,10 @@ for i, name in enumerate(group_names, 1):
     keys.append(Key([mod],          str(i), lazy.group[name].toscreen()))
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
 
-layout_theme = {"border_width": 0,
-                "margin": 15
+layout_theme = {"border_width": 2,
+                "margin": 15,
+                "border_focus": colors.color1,
+                "border_normal": colors.color5
                 }
 layouts = [
     # layout.Stack(num_stacks=2),
@@ -247,6 +249,7 @@ bring_front_click = False
 cursor_warp = False
 auto_fullscreen = True
 focus_on_window_activation = "smart"
+floating_layout = layout.Floating(**layout_theme)
 
 @hook.subscribe.startup_once
 def start_up():
