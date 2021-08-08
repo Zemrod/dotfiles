@@ -7,6 +7,7 @@ from libqtile.config import Click, Drag, Group, ScratchPad, DropDown, Key, Scree
 from libqtile.lazy import lazy
 
 import colors # symlink to $HOME/.cache/wal/colors.py
+from keybind import CONF
 
 mod = "mod4"
 terminal = "alacritty"
@@ -57,6 +58,9 @@ keys = [
     Key([mod],          "b", lazy.spawn("brave"), desc="Launch Brave"),
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
+
+    Key([mod],          "m", lazy.spawn(terminal + " -e " + CONF + "/keybind.py"),
+        desc="show Keybindings"),
 
     Key([],             "Print", lazy.spawn("flameshot gui"), desc="Start Screenshot selection"),
 
