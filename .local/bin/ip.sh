@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
+# dependency: Systemd-Networkd
 # name of the network device
-if ip a | grep inet | grep -q enp2s0;
+if networkctl | grep -q routable;
 then
-	dev=enp2s0
-elif ip a | grep inet | grep -q wlan0;
-then
-	dev=wlan0
+	dev="$(networkctl | grep routable | awk '{ print $2 }')"
 else
 	dev="none"
 fi
@@ -15,5 +13,6 @@ if [ $dev = "none" ]
 then
 	printf " no connection"
 else
-	printf " $(ip a | grep inet | grep $dev | awk '{ print $2 }' | awk -F'/' '{ print $1 }')"
+	# replace "grep -v Address" with "grep Address" to optain the IPv4
+	printf " $(networkctl status $dev | grep -v HW | grep -A 1 Address: | awk '{ print $1 }' | grep -v Address | sed -e 's/^*//')"
 fi
