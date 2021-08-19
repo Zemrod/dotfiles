@@ -13,6 +13,9 @@ if [ $dev = "none" ]
 then
 	printf " no connection"
 else
-	# replace "grep -v Address" with "grep Address" to optain the IPv4
-	printf " $(networkctl status $dev | grep -v HW | grep -A 1 Address: | awk '{ print $1 }' | grep -v Address | sed -e 's/^*//')"
+	# IPv6
+	# printf " $(networkctl status $dev | grep -v HW | grep -A 1 Address: | awk '{ print $1 }' | grep -v Address | sed -e 's/^*//')"
+
+	# IPv4
+	printf " $(networkctl status $dev | grep -v HW | grep -A 1 Address: | awk '{ if (NR==1) print $2 }')"
 fi
