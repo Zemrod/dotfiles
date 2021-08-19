@@ -4,7 +4,7 @@
 # name of the network device
 if networkctl | grep -q routable;
 then
-	dev="$(networkctl | grep routable | awk '{ print $2 }')"
+	dev=$(networkctl | grep routable | awk '{ print $2 }')
 else
 	dev="none"
 fi
