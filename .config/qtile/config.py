@@ -55,7 +55,7 @@ keys = [
 
     Key([mod, "shift"], "d", lazy.spawn("discord"), desc="Launch Discord"),
 
-    Key([mod],          "b", lazy.spawn("brave"), desc="Launch Brave"),
+    Key([mod],          "b", lazy.spawn("librewolf"), desc="Launch Librewolf"),
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
 
