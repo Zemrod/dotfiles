@@ -127,7 +127,7 @@ for i, name in enumerate(group_names, 1):
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
 
 layout_theme = {"border_width": 2,
-                "margin": 15,
+                "margin": [10, 15, 15, 15],
                 "border_focus": colors.color1,
                 "border_normal": colors.color5
                 }
