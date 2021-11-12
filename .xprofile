@@ -10,6 +10,9 @@ xrdb ~/.Xresources
 # start picom
 picom &
 
+# start Networkmanager
+nm-applet &
+
 # start lxsession
 lxsession &
 
