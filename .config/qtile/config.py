@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import subprocess
 from typing import List  # noqa: F401
@@ -101,7 +102,11 @@ group_names = [
     "ETC"
 ]
 
-# groups = [Group(i) for i in "123456789"]
+groups = [Group(name) for name in group_names]
+
+for i, name in enumerate(group_names, 1):
+    keys.append(Key([mod],          str(i), lazy.group[name].toscreen()))
+    keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
 
 scratchpad = [ScratchPad("scratchpad", [
     # Scratchpad for bpytop
@@ -111,8 +116,6 @@ scratchpad = [ScratchPad("scratchpad", [
     DropDown("note", terminal + " -e vim /tmp/note", height=0.7, opacity=1.0),
 ])]
 
-groups = [Group(name) for name in group_names]
-
 groups = scratchpad + groups
 
 keys.extend([
@@ -121,10 +124,6 @@ keys.extend([
     Key([mod, "shift"], "n", lazy.group["scratchpad"].dropdown_toggle("note"),
         desc="Launch a notepad in ST"),
 ])
-
-for i, name in enumerate(group_names, 1):
-    keys.append(Key([mod],          str(i), lazy.group[name].toscreen()))
-    keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name)))
 
 layout_theme = {"border_width": 2,
                 "margin": [10, 15, 15, 15],
@@ -168,7 +167,7 @@ screens = [
                 widget.Prompt(foreground=colors.color1),
                 widget.Memory(foreground=colors.color1),
                 widget.Sep(foreground=colors.color5),
-                widget.Net(foreground=colors.color1, interface="enp2s0"),
+                widget.Net(foreground=colors.color1, interface="wlan0"),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
@@ -184,9 +183,9 @@ screens = [
                 widget.Sep(foreground=colors.color5),
                 widget.Battery(foreground=colors.color1, update_interval=10),
                 widget.Sep(foreground=colors.color5),
-                widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
-                                   foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
+              # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
+              #                    foreground=colors.color1),
+              # widget.Sep(foreground=colors.color5),
                 widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
                                    foreground=colors.color1),
                 widget.Sep(foreground=colors.color5),
@@ -211,7 +210,7 @@ screens = [
                 widget.Prompt(),
                 widget.Memory(foreground=colors.color1),
                 widget.Sep(foreground=colors.color5),
-                widget.Net(foreground=colors.color1, interface="enp2s0"),
+                widget.Net(foreground=colors.color1, interface="wlan0"),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
@@ -222,9 +221,9 @@ screens = [
                 widget.GenPollText(func=lambda: subprocess.check_output("syspart.sh").decode("utf-8"), update_interval=10,
                                    foreground=colors.color1),
                 widget.Sep(foreground=colors.color5),
-                widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
-                                   foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
+              # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
+              #                    foreground=colors.color1),
+              # widget.Sep(foreground=colors.color5),
                 widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
                                    foreground=colors.color1),
                 widget.Sep(foreground=colors.color5),
@@ -256,10 +255,9 @@ cursor_warp = False
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 floating_layout = layout.Floating(**layout_theme)
+wmname = "Qtile"
 
 @hook.subscribe.startup_once
 def start_up():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
-
-wmname = "Qtile"
