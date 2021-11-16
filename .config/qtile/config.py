@@ -154,87 +154,91 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+screen1 = Screen(
+    top=bar.Bar(
+        [
+            widget.Image(
+                filename="~/.config/qtile/icons/arch.svg",
+            ),
+            widget.GroupBox(active=colors.color1, inactive=colors.color5,
+                            this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
+            widget.Sep(foreground=colors.color5),
+            widget.Prompt(foreground=colors.color1),
+            widget.Memory(foreground=colors.color1),
+            widget.Sep(foreground=colors.color5),
+            widget.Net(foreground=colors.color1, interface="wlan0"),
+            widget.Chord(
+                chords_colors={
+                    'launch': ("#ff0000", "#ffffff"),
+                },
+                name_transform=lambda name: name.upper(),
+            ),
+            widget.Spacer(),
+            widget.GenPollText(func=lambda: subprocess.check_output("pacupdate").decode("utf-8"), update_interval=360,
+                               foreground=colors.color1),
+            widget.Sep(foreground=colors.color5),
+            widget.GenPollText(func=lambda: subprocess.check_output("syspart.sh").decode("utf-8"), update_interval=10,
+                               foreground=colors.color1),
+            widget.Sep(foreground=colors.color5),
+            widget.Battery(foreground=colors.color1, update_interval=10),
+            widget.Sep(foreground=colors.color5),
+          # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
+          #                    foreground=colors.color1),
+          # widget.Sep(foreground=colors.color5),
+            widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
+                               foreground=colors.color1),
+            widget.Sep(foreground=colors.color5),
+            widget.Clock(foreground=colors.color1, format='%Y-%m-%d %a %I:%M %p'),
+            widget.Systray(),
+        ],
+        24,
+        background=colors.background,
+        margin=5,
+        opacity=0.8,
+    ),
+)
+
+screen2 = Screen(
+    top=bar.Bar(
+        [
+            widget.Image(
+                filename="~/.config/qtile/icons/arch.svg",
+            ),
+            widget.GroupBox(active=colors.color1, inactive=colors.color5,
+                            this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
+            widget.Sep(foreground=colors.color5),
+            widget.Prompt(),
+            widget.Memory(foreground=colors.color1),
+            widget.Sep(foreground=colors.color5),
+            widget.Net(foreground=colors.color1, interface="wlan0"),
+            widget.Chord(
+                chords_colors={
+                    'launch': ("#ff0000", "#ffffff"),
+                },
+                name_transform=lambda name: name.upper(),
+            ),
+            widget.Spacer(),
+            widget.GenPollText(func=lambda: subprocess.check_output("syspart.sh").decode("utf-8"), update_interval=10,
+                               foreground=colors.color1),
+            widget.Sep(foreground=colors.color5),
+          # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
+          #                    foreground=colors.color1),
+          # widget.Sep(foreground=colors.color5),
+            widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
+                               foreground=colors.color1),
+            widget.Sep(foreground=colors.color5),
+            widget.Clock(foreground=colors.color1, format='%Y-%m-%d %a %I:%M %p'),
+        ],
+        24,
+        background=colors.background,
+        margin=5,
+        opacity=0.8,
+    ),
+)
+
 screens = [
-    Screen(
-        top=bar.Bar(
-            [
-                widget.Image(
-                    filename="~/.config/qtile/icons/arch.svg",
-                ),
-                widget.GroupBox(active=colors.color1, inactive=colors.color5,
-                                this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
-                widget.Sep(foreground=colors.color5),
-                widget.Prompt(foreground=colors.color1),
-                widget.Memory(foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
-                widget.Net(foreground=colors.color1, interface="wlan0"),
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.Spacer(),
-                widget.GenPollText(func=lambda: subprocess.check_output("pacupdate").decode("utf-8"), update_interval=360,
-                                   foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
-                widget.GenPollText(func=lambda: subprocess.check_output("syspart.sh").decode("utf-8"), update_interval=10,
-                                   foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
-                widget.Battery(foreground=colors.color1, update_interval=10),
-                widget.Sep(foreground=colors.color5),
-              # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
-              #                    foreground=colors.color1),
-              # widget.Sep(foreground=colors.color5),
-                widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
-                                   foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
-                widget.Clock(foreground=colors.color1, format='%Y-%m-%d %a %I:%M %p'),
-                widget.Systray(),
-            ],
-            24,
-            background=colors.background,
-            margin=5,
-            opacity=0.8,
-        ),
-    ),
-    Screen(
-        top=bar.Bar(
-            [
-                widget.Image(
-                    filename="~/.config/qtile/icons/arch.svg",
-                ),
-                widget.GroupBox(active=colors.color1, inactive=colors.color5,
-                                this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
-                widget.Sep(foreground=colors.color5),
-                widget.Prompt(),
-                widget.Memory(foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
-                widget.Net(foreground=colors.color1, interface="wlan0"),
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.Spacer(),
-                widget.GenPollText(func=lambda: subprocess.check_output("syspart.sh").decode("utf-8"), update_interval=10,
-                                   foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
-              # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
-              #                    foreground=colors.color1),
-              # widget.Sep(foreground=colors.color5),
-                widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
-                                   foreground=colors.color1),
-                widget.Sep(foreground=colors.color5),
-                widget.Clock(foreground=colors.color1, format='%Y-%m-%d %a %I:%M %p'),
-            ],
-            24,
-            background=colors.background,
-            margin=5,
-            opacity=0.8,
-        ),
-    ),
+    screen1,
+    screen2,
 ]
 
 # Drag floating layouts.
