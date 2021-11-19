@@ -55,6 +55,7 @@ editor_cmd = terminal .. " -e " .. editor
 
 -- additional beutiful config
 beautiful.useless_gap = 15
+beautiful.font = "Ubuntu Mono 12"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
