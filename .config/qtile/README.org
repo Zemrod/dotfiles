@@ -55,7 +55,7 @@ The keybindings used for qtile.
 | mod + shift + q       | quits qtile                                            |
 | mod + p               | launches rofi                                          |
 | mod + d               | launches emacs (the d is for doom-emacs)               |
-| mod + b               | lauches Librewolf (Bis for Browser)                    |
+| mod + b               | lauches Librewolf (B is for Browser)                   |
 
 #+BEGIN_SRC python
 keys = [
