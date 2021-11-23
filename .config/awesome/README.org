@@ -93,21 +93,21 @@ editor_cmd = terminal .. " -e " .. editor
 beautiful.useless_gap = 15
 beautiful.font = "Ubuntu Mono 12"
 
-beautiful.border_focus = colors.color1
-beautiful.border_normal = colors.color5
+beautiful.border_focus = colors.color5
+beautiful.border_normal = colors.color1
 beautiful.border_width = 2
 
 beautiful.bg_systray = colors.background
 
 beautiful.tasklist_bg_normal = colors.background
-beautiful.tasklist_fg_normal = colors.color5
+beautiful.tasklist_fg_normal = colors.color1
 beautiful.tasklist_bg_focus = colors.background
-beautiful.tasklist_fg_focus = colors.color1
+beautiful.tasklist_fg_focus = colors.color5
 
 beautiful.taglist_bg_normal = colors.background
-beautiful.taglist_fg_normal = colors.color5
+beautiful.taglist_fg_normal = colors.color1
 beautiful.taglist_bg_focus = colors.background
-beautiful.taglist_fg_focus = colors.color1
+beautiful.taglist_fg_focus = colors.color5
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
