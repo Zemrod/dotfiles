@@ -230,8 +230,12 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
           -- mykeyboardlayout,
             awful.widget.watch('bash -c "pacupdate"', 120),
-            wibox.widget.systray(),
+            wibox.widget.textbox(' '),
+            awful.widget.watch('bash -c "syspart.sh"', 120),
+            wibox.widget.textbox(' '),
+            awful.widget.watch('bash -c "kernel.sh"', 500),
             mytextclock,
+            wibox.widget.systray(),
             s.mylayoutbox,
         },
     }
