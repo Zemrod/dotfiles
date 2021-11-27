@@ -1,9 +1,10 @@
 configuration {
 	terminal: "alacritty";
 	modi: "combi";
-	theme: "/usr/share/rofi/themes/sidebar.rasi";
 	font: "Ubuntu Mono 12";
 	sorting-method: "fzf";
 	combi-modi: "run,ssh";
 	ssh-command: "{terminal} -e {ssh-client} {host}";
+
 }
+@theme "/usr/share/rofi/themes/sidebar.rasi"
