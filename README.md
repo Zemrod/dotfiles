@@ -6,6 +6,7 @@ dependencies: (these deps apply to the entire repo, xmonad-config has some addit
   4. pywal - colortheme (used in i3, xmonad, qtile, vim, bg.sh)
   5. nitrogen - for bg.sh, ranwal.sh and .xprofile(can simply be removed from here)
   6. picom - compositor (remove if unwanted)
+  7. starship - shell prompt used in fish and zsh
 
 Archicon for Qtile:
 - from the BeautyLine Icon Theme https://store.kde.org/p/1425426/
