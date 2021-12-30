@@ -16,6 +16,9 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias rsync='rsync -v'
 
+# zstd compression alias
+alias tarzstd='tar --zstd -cf'
+
 # ip colorization
 alias ip='ip -color=auto'
 

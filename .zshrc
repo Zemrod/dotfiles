@@ -107,57 +107,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #export EDITOR=vim
 #export QT_QPA_PLATFORMTHEME=qt5ct
 
-# Emacs colorisation
-alias emacs='emacs --color=always'
-
-# Useful Aliases (Colorization and shortcuts)
-alias ls='exa --color=auto --group-directories-first --git'
-alias ll='ls --group --all --all --classify --long --header'
-alias la='ls --all'
-alias l='ls --group --classify --long --header'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias rsync='rsync -v'
-
-# ip colorization
-alias ip='ip -color=auto'
-
-# Remove orphans
-alias orphan='sudo pacman -Rns $(pacman -Qtdq)'
-
-# Pacman cache clear
-alias cache='sudo paccache --remove --keep 1'
-
-# Pacman cache clean
-alias cache-clean='sudo paccache --remove --keep 0'
-
-# Pacman cache clear all uninstalled
-alias cache-uninstalled='sudo paccache --remove --uninstalled --keep 0'
-
-# Service list enabled
-alias service='systemctl list-unit-files --state=enabled'
-
-# pywal alias to prevent it from setting a wallpaper
-alias wal='wal -n'
-
-# alias for youtube-dl
-alias yt-mp3='youtube-dl -x --audio-format mp3 -o "%(title)s.%(ext)s"'
-alias yt-vid='youtube-dl -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" -o "%(title)s.%(ext)s"'
-
-# cargo colorization
-alias cargo='cargo --color always'
-
-# alias for ripgrep
-alias grep='rg'
-
-# Alias for dust (du + rust) human-readable by default
-alias du='dust'
-
-# a cat(1) clone with wings
-alias cat='bat'
-
-# rustic ps replacement
-alias ps='procs'
+source $HOME/.zsh/zsh_alias
 
 ### lolcate related aliases
 # query the music database
