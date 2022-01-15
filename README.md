@@ -10,3 +10,7 @@ dependencies: (these deps apply to the entire repo, xmonad-config has some addit
 
 Archicon for Qtile:
 - from the BeautyLine Icon Theme https://store.kde.org/p/1425426/
+
+# Information
+
+All unverified commits up to 15.01.2022 12pm are made by me
