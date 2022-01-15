@@ -4,7 +4,7 @@ import subprocess
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, ScratchPad, DropDown, Key, Screen
+from libqtile.config import Click, Drag, Group, ScratchPad, DropDown, Key, Screen, Match
 from libqtile.lazy import lazy
 
 import colors # symlink to $HOME/.cache/wal/colors.py
@@ -258,7 +258,10 @@ bring_front_click = False
 cursor_warp = False
 auto_fullscreen = True
 focus_on_window_activation = "smart"
-floating_layout = layout.Floating(**layout_theme)
+floating_layout = layout.Floating(float_rules=[
+        *layout.Floating.default_float_rules,
+        Match(wm_class='pinentry-gtk-2'), # GPG key password entry
+    ], **layout_theme)
 wmname = "Qtile"
 
 @hook.subscribe.startup_once
