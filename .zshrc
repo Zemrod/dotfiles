@@ -10,7 +10,7 @@ zstyle ':completion:*' menu select=long
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/sinon/.zshrc'
+zstyle :compinstall filename '/home/cinque/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -29,7 +29,7 @@ bindkey -v
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/sinon/.oh-my-zsh"
+export ZSH="/home/cinque/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
