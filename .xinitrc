@@ -8,7 +8,7 @@
 xsetroot -cursor_name left_ptr
 
 # Start qtile
-#exec qtile start
+exec qtile start
 
 # start awesome
-exec awesome
+# exec awesome
