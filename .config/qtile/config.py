@@ -56,7 +56,7 @@ keys = [
 
     Key([mod, "shift"], "d", lazy.spawn("discord"), desc="Launch Discord"),
 
-    Key([mod],          "b", lazy.spawn("librewolf"), desc="Launch Librewolf"),
+    Key([mod],          "b", lazy.spawn("brave"), desc="Launch Brave"),
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
 
@@ -166,7 +166,7 @@ screen1 = Screen(
             widget.Prompt(foreground=colors.color1),
             widget.Memory(foreground=colors.color1),
             widget.Sep(foreground=colors.color5),
-            widget.Net(foreground=colors.color1, interface="wlan0"),
+            widget.Net(foreground=colors.color1, interface="enp2s0"),
             widget.Chord(
                 chords_colors={
                     'launch': ("#ff0000", "#ffffff"),
@@ -210,7 +210,7 @@ screen2 = Screen(
             widget.Prompt(),
             widget.Memory(foreground=colors.color1),
             widget.Sep(foreground=colors.color5),
-            widget.Net(foreground=colors.color1, interface="wlan0"),
+            widget.Net(foreground=colors.color1, interface="enp2s0"),
             widget.Chord(
                 chords_colors={
                     'launch': ("#ff0000", "#ffffff"),
