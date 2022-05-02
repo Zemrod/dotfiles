@@ -23,3 +23,6 @@ xset -dpms &
 
 # load pywal colorscheme
 wal -R &
+
+# load emacs daemon
+emacs --deamon &
