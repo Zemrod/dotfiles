@@ -11,7 +11,7 @@ import colors # symlink to $HOME/.cache/wal/colors.py
 from keybind import CONF
 
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 altterminal = "st"
 rofi = "rofi -disable-history -case-sensitive -sort -show combi"
 

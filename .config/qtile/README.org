@@ -39,7 +39,7 @@ Some variables that will be used for easier maintainance
 
 #+BEGIN_SRC python
 mod = "mod4"
-terminal = "alacritty"
+terminal = "kitty"
 altterminal = "st"
 rofi = "rofi -disable-history -case-sensitive -sort -show combi"
 #+END_SRC
@@ -49,7 +49,7 @@ The keybindings used for qtile.
 
 | IMPORTANT KEYBINDINGS | ACTION                                                 |
 |-----------------------+--------------------------------------------------------|
-| mod + return          | opens the primary terminal (in this example alacritty) |
+| mod + return          | opens the primary terminal (in this example kitty) |
 | mod + shift + return  | opens the alternative terminal (in this example st)    |
 | mod + q               | restarts qtile                                         |
 | mod + shift + q       | quits qtile                                            |

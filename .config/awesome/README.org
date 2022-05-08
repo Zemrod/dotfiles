@@ -84,7 +84,7 @@ These Variables will be used in this config
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty"
 rofi = "rofi -disable-history -case-sensitive -sort -show combi"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
@@ -318,7 +318,7 @@ root.buttons(gears.table.join(
 
 | IMPORTANT KEYBINDINGS | ACTION                                                 |
 |-----------------------+--------------------------------------------------------|
-| mod + return          | opens the primary terminal (in this example alacritty) |
+| mod + return          | opens the primary terminal (in this example kitty) |
 | mod + shift + return  | opens the alternative terminal (in this example st)    |
 | mod + q               | restarts qtile                                         |
 | mod + shift + q       | quits qtile                                            |
