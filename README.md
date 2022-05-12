@@ -7,6 +7,7 @@ dependencies: (these deps apply to the entire repo, xmonad-config has some addit
   5. nitrogen - for bg.sh, ranwal.sh and .xprofile(can simply be removed from here)
   6. picom - compositor (remove if unwanted)
   7. starship - shell prompt used in fish and zsh
+  8. FontAwesome for the icons in the WM
 
 Archicon for Qtile:
 - from the BeautyLine Icon Theme https://store.kde.org/p/1425426/
