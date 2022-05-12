@@ -320,8 +320,8 @@ root.buttons(gears.table.join(
 |-----------------------+--------------------------------------------------------|
 | mod + return          | opens the primary terminal (in this example kitty) |
 | mod + shift + return  | opens the alternative terminal (in this example st)    |
-| mod + q               | restarts qtile                                         |
-| mod + shift + q       | quits qtile                                            |
+| mod + q               | restarts awesome                                         |
+| mod + shift + q       | quits awesome                                            |
 | mod + p               | launches rofi                                          |
 | mod + d               | launches emacs (the d is for doom-emacs)               |
 | mod + b               | lauches Brave (B is for Browser)                       |
