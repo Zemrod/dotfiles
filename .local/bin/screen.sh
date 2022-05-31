@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-primary=eDP1
-secondary=HDMI1
+primary=$(xrandr | grep connected | grep -v dis | grep primary | awk '{ print $1 }')
+secondary=$(xrandr | grep connected | grep -v dis | grep -v primary | awk '{ print $1 }')
 
 if [[ $1 = "on" ]]
 then
