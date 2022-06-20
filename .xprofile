@@ -25,4 +25,4 @@ xset -dpms &
 wal -R &
 
 # load emacs daemon
-emacs --daemon &
+/usr/bin/emacs --daemon &
