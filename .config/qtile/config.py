@@ -8,7 +8,6 @@ from libqtile.config import Click, Drag, Group, ScratchPad, DropDown, Key, Scree
 from libqtile.lazy import lazy
 
 import colors # symlink to $HOME/.cache/wal/colors.py
-from keybind import CONF
 
 mod = "mod4"
 terminal = "kitty"
