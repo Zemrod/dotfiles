@@ -60,9 +60,6 @@ keys = [
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
 
-    Key([mod],          "m", lazy.spawn(terminal + " -e " + CONF + "/keybind.py"),
-        desc="show Keybindings"),
-
     Key([],             "Print", lazy.spawn("flameshot gui"), desc="Start Screenshot selection"),
 
     # Key([mod, "shift"], "p", lazy.spawn("st -e bpytop"), desc="Launch bpytop"),
