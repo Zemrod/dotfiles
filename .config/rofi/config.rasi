@@ -1,5 +1,5 @@
 configuration {
-	terminal: "alacritty";
+	terminal: "kitty";
 	modi: "combi";
 	font: "Ubuntu Mono 12";
 	sorting-method: "fzf";
