@@ -239,12 +239,9 @@ bindsym $mod+y move workspace to output $primary
 # bindsym $mod+Ctrl+l exec i3lock -t -i ~/.config/i3/lockscreen/lock.png
 
 # assign window to workspace x
-assign [class="Opera"] $ws2
 assign [class="Code"] $ws3
 assign [class="Virt-manager"] $ws4
 assign [class="discord"] $ws9
 
 # Autostart
 # exec --no-startup-id ~/.config/i3/autostart.sh
-# megasync autostart
-# exec --no-startup-id megasync start
