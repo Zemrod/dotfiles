@@ -24,5 +24,11 @@ xset -dpms &
 # load pywal colorscheme
 wal -R &
 
+# launch Nextcloud sync
+nextcloud &
+
+# launch flameshot as a background process
+flameshot &
+
 # load emacs daemon
 /usr/bin/emacs --daemon &

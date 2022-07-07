@@ -16,7 +16,6 @@
 - [[#key-bindings][Key bindings]]
 - [[#rules][Rules]]
 - [[#signals][Signals]]
-- [[#autostart][Autostart]]
 
 * Imports
 The Lua modules that are used in this config
@@ -731,11 +730,4 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
-#+END_SRC
-
-
-* Autostart
-
-#+BEGIN_SRC lua
-awful.spawn.with_shell("~/.config/awesome/autostart.sh")
 #+END_SRC

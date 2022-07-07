@@ -15,7 +15,6 @@
 - [[#screens-and-bars][Screens and Bars]]
 - [[#mouse-bindings][Mouse bindings]]
 - [[#additional-variables][Additional variables]]
-- [[#autostart][Autostart]]
 
 * Imports
 These are the python modules that must be imported for this config.
@@ -346,14 +345,4 @@ floating_layout = layout.Floating(float_rules=[
         Match(wm_class='pinentry-gtk-2'), # GPG key password entry
     ], **layout_theme)
 wmname = "Qtile"
-#+END_SRC
-
-* Autostart
-Qtile specific autostart
-
-#+BEGIN_SRC python
-@hook.subscribe.startup_once
-def start_up():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.call([home])
 #+END_SRC

@@ -259,8 +259,3 @@ floating_layout = layout.Floating(float_rules=[
         Match(wm_class='pinentry-gtk-2'), # GPG key password entry
     ], **layout_theme)
 wmname = "Qtile"
-
-@hook.subscribe.startup_once
-def start_up():
-    home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.call([home])
