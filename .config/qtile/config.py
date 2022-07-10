@@ -51,7 +51,7 @@ keys = [
 
     Key([mod],          "d", lazy.spawn("emacs"), desc="Launch emacs"),
 
-    Key([mod],          "c", lazy.spawn("atom"), desc="Launch Atom"),
+    Key([mod],          "c", lazy.spawn("codium"), desc="Launch VSCodium"),
 
     Key([mod, "shift"], "d", lazy.spawn("discord"), desc="Launch Discord"),
 
