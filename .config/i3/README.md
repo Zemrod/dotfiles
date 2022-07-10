@@ -12,4 +12,4 @@ INFO:
 
 Fonts used: save it at ~/.fonts
   1. Font Awesome: Symbols for the workspaces (github/available in the arch repo: ttf-font-awesome)
-  2. Ubuntu Mono
+  2. Fira Code

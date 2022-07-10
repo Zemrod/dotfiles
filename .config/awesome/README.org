@@ -90,7 +90,7 @@ editor_cmd = terminal .. " -e " .. editor
 
 -- additional beautiful config
 beautiful.useless_gap = 15
-beautiful.font = "Ubuntu Mono 12"
+beautiful.font = "Fira Code 12"
 
 beautiful.border_focus = colors.color5
 beautiful.border_normal = colors.color1

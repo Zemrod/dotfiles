@@ -210,7 +210,7 @@ These are the default settings for the Widgets
 
 #+BEGIN_SRC python
 widget_defaults = dict(
-    font='Ubuntu Mono',
+    font='Fira Code',
     fontsize=12,
     padding=3,
 )
