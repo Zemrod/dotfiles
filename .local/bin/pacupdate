@@ -2,4 +2,9 @@
 
 update=$(checkupdates | wc -l)
 
-printf "$update packages"
+if [ $update = "1" ]
+then
+	printf "$update package"
+else
+	printf "$update packages"
+fi
