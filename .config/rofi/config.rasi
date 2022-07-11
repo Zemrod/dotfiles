@@ -1,7 +1,7 @@
 configuration {
 	terminal: "kitty";
 	modi: "combi";
-	font: "Ubuntu Mono 12";
+	font: "Fira Code 12";
 	sorting-method: "fzf";
 	combi-modi: "run,ssh";
 	ssh-command: "{terminal} -e {ssh-client} {host}";
