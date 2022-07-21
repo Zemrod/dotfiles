@@ -31,4 +31,4 @@ nextcloud &
 flameshot &
 
 # load emacs daemon
-/usr/bin/emacs --daemon &
+# /usr/bin/emacs --daemon &
