@@ -36,6 +36,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
 
+;; Setting the local leader to Backspace
+(setq doom-localleader-key "DEL")
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
