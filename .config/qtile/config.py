@@ -108,8 +108,8 @@ scratchpad = [ScratchPad("scratchpad", [
     # Scratchpad for bpytop
     DropDown("res", terminal + " -e bpytop", height=0.7, opacity=1.0),
 
-    # ScratchPad for taking notes
-    DropDown("note", terminal + " -e vim /tmp/note", height=0.7, opacity=1.0),
+    # ScratchPad version of the terminal
+    DropDown("note", terminal, height=0.7, opacity=1.0),
 ])]
 
 groups = scratchpad + groups
@@ -118,7 +118,7 @@ keys.extend([
     Key([mod, "shift"], "p", lazy.group["scratchpad"].dropdown_toggle("res"),
         desc="Launch bpytop"),
     Key([mod, "shift"], "n", lazy.group["scratchpad"].dropdown_toggle("note"),
-        desc="Launch a notepad in ST"),
+        desc="Launch the terminal as a scratchpad"),
 ])
 
 layout_theme = {"border_width": 2,
