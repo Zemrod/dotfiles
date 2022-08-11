@@ -31,6 +31,17 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #export EDITOR=vim
 #export QT_QPA_PLATFORMTHEME=qt5ct
 
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+# cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+# source ~/.cache/wal/colors-tty.sh
+
 source $HOME/.zsh/zsh_alias
 
 ### lolcate related aliases
@@ -41,16 +52,5 @@ alias music='lolcate --db $MUSIC_DB --type audio'
 play(){ mpv --playlist=<(music $1); }
 play_shuf(){ mpv --playlist=<(music $1 | shuf); }
 ###
-
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(/usr/bin/cat ~/.cache/wal/sequences &)
-
-# Alternative (blocks terminal for 0-3ms)
-# /usr/bin/cat ~/.cache/wal/sequences
-
-# To add support for TTYs this line can be optionally added.
-# source ~/.cache/wal/colors-tty.sh
 
 eval "$(starship init zsh)"

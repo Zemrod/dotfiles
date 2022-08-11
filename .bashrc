@@ -5,6 +5,25 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+PS1='[\[\033[1;36m\]\u\[\033[1;33m\]@\h\[\033[1;34m\] \w\[\033[0m\]]\$ '
+
+# Powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/share/powerline/bindings/bash/powerline.sh
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat ~/.cache/wal/sequences &)
+
+# Alternative (blocks terminal for 0-3ms)
+# cat ~/.cache/wal/sequences
+
+# To add support for TTYs this line can be optionally added.
+# source ~/.cache/wal/colors-tty.sh
+
 # Useful Aliases (Colorization and shortcuts)
 alias ls='exa --color=auto --group-directories-first --git'
 alias ll='ls --group --all --all --classify --long --header'
@@ -65,25 +84,6 @@ alias music='lolcate --db $MUSIC_DB --type audio'
 play(){ mpv --playlist=<(music $1); }
 play_shuf(){ mpv --playlist=<(music $1 | shuf); }
 ###
-
-PS1='[\[\033[1;36m\]\u\[\033[1;33m\]@\h\[\033[1;34m\] \w\[\033[0m\]]\$ '
-
-# Powerline
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
-
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(/usr/bin/cat ~/.cache/wal/sequences &)
-
-# Alternative (blocks terminal for 0-3ms)
-# /usr/bin/cat ~/.cache/wal/sequences
-
-# To add support for TTYs this line can be optionally added.
-# source ~/.cache/wal/colors-tty.sh
 
 # running pfetch
 # pfetch
