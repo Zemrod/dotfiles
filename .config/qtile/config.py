@@ -153,9 +153,9 @@ extension_defaults = widget_defaults.copy()
 screen1 = Screen(
     top=bar.Bar(
         [
-            widget.Image(
-                filename="~/.config/qtile/icons/arch.svg",
-            ),
+#            widget.Image(
+#                filename="~/.config/qtile/icons/arch.svg",
+#            ),
             widget.GroupBox(active=colors.color1, inactive=colors.color5,
                             this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
             widget.Sep(foreground=colors.color5),
@@ -197,9 +197,9 @@ screen1 = Screen(
 screen2 = Screen(
     top=bar.Bar(
         [
-            widget.Image(
-                filename="~/.config/qtile/icons/arch.svg",
-            ),
+#            widget.Image(
+#                filename="~/.config/qtile/icons/arch.svg",
+#            ),
             widget.GroupBox(active=colors.color1, inactive=colors.color5,
                             this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
             widget.Sep(foreground=colors.color5),
