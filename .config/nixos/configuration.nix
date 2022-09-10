@@ -10,16 +10,20 @@
       ./hardware-configuration.nix
     ];
 
+  # Use the systemd-boot EFI boot loader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
   # Use the GRUB 2 boot loader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.version = 2;
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.version = 2;
   # boot.loader.grub.efiSupport = true;
   # boot.loader.grub.efiInstallAsRemovable = true;
   # boot.loader.efi.efiSysMountPoint = "/boot/efi";
   # Define on which hard drive you want to install Grub.
-  boot.loader.grub.device = "/dev/vda"; # or "nodev" for efi only
+  # boot.loader.grub.device = "/dev/vda"; # or "nodev" for efi only
 
-  # networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -103,6 +107,7 @@
     networkmanagerapplet
     nitrogen
     nix-zsh-completions
+    pinentry-gtk2
     pass
     pavucontrol
     powerline
@@ -162,12 +167,19 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
   };
+
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "gtk2";
+  };
   
   services.locate = {
     locate = pkgs.mlocate;
     enable = true;
     localuser = null;
   };
+
+  services.pcscd.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -202,4 +214,3 @@
   system.stateVersion = "22.05"; # Did you read the comment?
 
 }
-
