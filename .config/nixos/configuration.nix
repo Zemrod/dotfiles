@@ -115,7 +115,6 @@
     pass
     pavucontrol
     picom
-    pinentry
     powerline
     procs
     pywal
@@ -178,7 +177,7 @@
 
   programs.gnupg.agent = {
     enable = true;
-    #pinentryFlavor = "qt";
+    pinentryFlavor = "curses";
   };
   
   services.locate = {
@@ -200,7 +199,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh.enable = false;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

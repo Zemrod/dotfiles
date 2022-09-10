@@ -8,7 +8,7 @@ xrandr | /usr/bin/grep -q HDMI1 && xrandr --output eDP1 --auto --output HDMI1 --
 xrdb ~/.Xresources
 
 # start picom
-picom &
+picom --experimental-backends &
 
 # start Networkmanager
 nm-applet &
