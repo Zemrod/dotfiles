@@ -85,17 +85,22 @@
   #   ];
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     bat
     beauty-line-icon-theme
     brave
+    coreutils
     curl
+    discord
     du-dust
     emacs
     exa
     fd
+    flameshot
     git
     gnupg
     kitty
@@ -107,9 +112,10 @@
     networkmanagerapplet
     nitrogen
     nix-zsh-completions
-    pinentry-gtk2
     pass
     pavucontrol
+    picom
+    pinentry-gtk2
     powerline
     procs
     pywal
@@ -133,11 +139,13 @@
 
   fonts.fonts = with pkgs; [
     dejavu_fonts
+    fira-code
+    font-awesome
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
-    fira-code
-    font-awesome
+    source-han-code-jp
+    source-han-sans
   ];
 
 # nixpkgs.overlays = [
