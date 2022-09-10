@@ -7,4 +7,4 @@ configuration {
 	ssh-command: "{terminal} -e {ssh-client} {host}";
 
 }
-@theme "/usr/share/rofi/themes/sidebar.rasi"
+@theme "dracula.rasi"
