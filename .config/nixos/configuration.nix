@@ -115,7 +115,7 @@
     pass
     pavucontrol
     picom
-    pinentry-gtk2
+    pinentry
     powerline
     procs
     pywal
@@ -178,7 +178,7 @@
 
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "gtk2";
+    #pinentryFlavor = "qt";
   };
   
   services.locate = {
