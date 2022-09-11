@@ -96,6 +96,7 @@
     coreutils
     curl
     discord
+    dracula-theme
     du-dust
     emacs
     exa
