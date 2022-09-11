@@ -11,7 +11,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = "%StdinReader% | %battery% | %memory% | %dynnetwork% }{ %pacupdate% | %disku% | %date% | <fn=1></fn> %uname%"
+   , template = "%StdinReader% | %battery% | %memory% | %dynnetwork% }{ %disku% | %date% | <fn=1></fn> %uname%"
 
    -- general behavior
    , lowerOnStart =     False    -- send to bottom of window stack on start
@@ -111,9 +111,6 @@ Config {
         -- time and date indicator 
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
         , Run Date           "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
-
-        -- bashscript for pacupdate located in '.local/bin'
-        , Run Com "pacupdate" [] "" 3600
 
         , Run Com "uname" [ "-r" ] "" 3600
 
