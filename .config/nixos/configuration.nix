@@ -101,6 +101,7 @@
     exa
     fd
     flameshot
+    gcc
     git
     gnupg
     kitty
@@ -177,7 +178,8 @@
 
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "curses";
+    # problem with gtk-theme (gtk2 in general)
+    pinentryFlavor = "gtk2";
   };
   
   services.locate = {
@@ -187,6 +189,7 @@
   };
 
   services.pcscd.enable = true;
+  services.fstrim.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
