@@ -8,10 +8,10 @@
 PS1='[\[\033[1;36m\]\u\[\033[1;33m\]@\h\[\033[1;34m\] \w\[\033[0m\]]\$ '
 
 # Powerline
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /usr/share/powerline/bindings/bash/powerline.sh
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
@@ -86,7 +86,7 @@ play_shuf(){ mpv --playlist=<(music $1 | shuf); }
 ###
 
 # running pfetch
-# pfetch
+#pfetch
 
 # start fish but keep main shell as BASH
-exec fish
+#exec fish
