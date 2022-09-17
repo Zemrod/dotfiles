@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -43,15 +43,10 @@
   services.xserver = {
     enable = true;
     windowManager.qtile.enable = true;
+    layout = "de"; # X11-keymap
+    libinput.enable = true; # touchpad
+    displayManager.startx.enable = true;
   };
-
-
-  # Configure keymap in X11
-  services.xserver.layout = "de";
-  # services.xserver.xkbOptions = {
-  #   "eurosign:e";
-  #   "caps:escape" # map caps to escape.
-  # };
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -59,11 +54,6 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
-
-  services.xserver.displayManager.startx.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cinque = {
@@ -76,8 +66,6 @@
   #   ];
   };
 
-  nixpkgs.config.allowUnfree = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -86,7 +74,6 @@
     brave
     coreutils
     curl
-    discord
     dracula-theme
     du-dust
     emacs
@@ -174,6 +161,8 @@
     pinentryFlavor = "gtk2";
   };
   
+  # List services that you want to enable:
+
   services.locate = {
     locate = pkgs.mlocate;
     enable = true;
@@ -182,8 +171,6 @@
 
   services.pcscd.enable = true;
   services.fstrim.enable = true;
-
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = false;
