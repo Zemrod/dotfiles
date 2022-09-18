@@ -1,6 +1,6 @@
 #+title: Qtile config
 #+author: Cinque
-#+date: [2022-09-04 Sun]
+#+date: [2022-09-18 Sun]
 
 #+PROPERTY: header-args :tangle config.py
 
@@ -100,6 +100,8 @@ keys = [
     Key([mod],          "b", lazy.spawn("brave"), desc="Launch Brave"),
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
+
+    Key([mod],          "l", lazy.spawn("lock.sh"), desc="lock the screen"),
 
     Key([],             "Print", lazy.spawn("flameshot gui"), desc="Start Screenshot selection"),
 
