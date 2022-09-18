@@ -1,5 +1,7 @@
 # i3-config
 
+the i3 config is old and wasn't used in quite a while, lot of stuff may break
+
 contains: ~/.config/i3
 
 The i3status.conf is used for the configuration of the i3status

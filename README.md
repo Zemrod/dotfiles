@@ -1,6 +1,6 @@
 # Dotfiles
 
-dependencies: (these deps apply to the entire repo, xmonad-config has some additional deps mentioned there)
+dependencies: (not really curated anymore)
   1. powerline - for the powerline appearance in bash
   2. powerline-vim - vim plugin of powerline
   4. pywal - colortheme (used in i3, xmonad, qtile, vim, bg.sh)
