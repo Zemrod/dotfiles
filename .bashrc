@@ -90,3 +90,6 @@ play_shuf(){ mpv --playlist=<(music $1 | shuf); }
 
 # start fish but keep main shell as BASH
 #exec fish
+
+# include the starship prompt
+eval "$(starship init bash)"
