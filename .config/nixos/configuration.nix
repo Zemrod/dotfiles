@@ -111,6 +111,7 @@
     xclip
     xfce.ristretto
     xfce.thunar
+    yt-dlp
     zsh
     zsh-autosuggestions
     zsh-completions
