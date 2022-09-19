@@ -49,7 +49,7 @@ keys = [
     Key([mod, "shift"], "Return", lazy.spawn(altterminal),
         desc="Launch alternate terminal"),
 
-    Key([mod],          "d", lazy.spawn("emacs"), desc="Launch emacs"),
+    Key([mod],          "d", lazy.spawn("emacsclient -c -a emacs"), desc="Launch emacs"),
 
     Key([mod],          "c", lazy.spawn("codium"), desc="Launch VSCodium"),
 

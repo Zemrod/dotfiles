@@ -1,6 +1,6 @@
 #+title: Qtile config
 #+author: Cinque
-#+date: [2022-09-18 Sun]
+#+date: [2022-09-19 Mon]
 
 #+PROPERTY: header-args :tangle config.py
 
@@ -91,7 +91,7 @@ keys = [
     Key([mod, "shift"], "Return", lazy.spawn(altterminal),
         desc="Launch alternate terminal"),
 
-    Key([mod],          "d", lazy.spawn("emacs"), desc="Launch emacs"),
+    Key([mod],          "d", lazy.spawn("emacsclient -c -a emacs"), desc="Launch emacs"),
 
     Key([mod],          "c", lazy.spawn("codium"), desc="Launch VSCodium"),
 

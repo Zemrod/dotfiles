@@ -291,7 +291,7 @@ globalkeys = gears.table.join(
 
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
-    awful.key({ modkey,           }, "d", function () awful.spawn("emacs") end,
+    awful.key({ modkey,           }, "d", function () awful.spawn("emacsclient -c -a emacs") end,
               {description = "launch emacs", group = "launcher"}),
     awful.key({ modkey,           }, "c", function () awful.spawn("codium") end,
               {description = "launch vscodium", group = "launcher"}),
