@@ -55,10 +55,16 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # libvirt
+  virtualisation.libvirtd.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cinque = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel" # Enable ‘sudo’ for the user.
+      "libvirtd" # Allow usage of libvirt without extra authentication.
+    ];
     shell = pkgs.zsh;
   #   packages = with pkgs; [
   #     brave
@@ -108,6 +114,7 @@
     starship
     topgrade
     vimHugeX
+    virt-manager
     xclip
     xfce.ristretto
     xfce.thunar
