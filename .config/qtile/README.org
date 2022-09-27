@@ -101,8 +101,6 @@ keys = [
 
     Key([mod],          "p", lazy.spawn(rofi), desc="Launch rofi"),
 
-    Key([mod],          "l", lazy.spawn("lock.sh"), desc="lock the screen"),
-
     Key([],             "Print", lazy.spawn("flameshot gui"), desc="Start Screenshot selection"),
 
     # Key([mod, "shift"], "p", lazy.spawn("st -e bpytop"), desc="Launch bpytop"),

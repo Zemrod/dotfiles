@@ -89,7 +89,6 @@
     gcc
     git
     gnupg
-    i3lock
     kitty
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum

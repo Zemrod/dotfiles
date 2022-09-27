@@ -301,8 +301,6 @@ globalkeys = gears.table.join(
               {description = "launch Brave", group = "launcher"}),
     awful.key({ modkey,           }, "p", function () awful.spawn(rofi) end,
               {description = "launch rofi", group = "launcher"}),
-    awful.key({ modkey,           }, "e", function () awful.spawn("lock.sh") end,
-              {description = "lock the screen", group = "lock"}),
     awful.key({                   }, "Print", function () awful.spawn("flameshot gui") end,
               {description = "start screenshot selection", group = "launcher"}),
     awful.key({ modkey,           }, "q", awesome.restart,
