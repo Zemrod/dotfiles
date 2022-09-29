@@ -165,12 +165,10 @@
 
   programs.gnupg.agent = {
     enable = true;
-    # problem with gtk-theme (gtk2 in general)
     pinentryFlavor = "gtk2";
   };
   
   # List services that you want to enable:
-
   services.locate = {
     locate = pkgs.mlocate;
     enable = true;
