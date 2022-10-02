@@ -39,6 +39,9 @@
   #   useXkbConfig = true; # use xkbOptions in tty.
   };
 
+  # Nix options
+  nix.settings.auto-optimise-store = true;
+
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
