@@ -175,7 +175,6 @@
     localuser = null;
   };
 
-  services.pcscd.enable = true;
   services.fstrim.enable = true;
 
   # Enable the OpenSSH daemon.
