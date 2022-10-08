@@ -5,7 +5,7 @@ secondary=$(xrandr | grep connected | grep -v dis | grep -v primary | awk '{ pri
 
 if [[ $1 = "on" ]]
 then
-	xrandr --output ${primary} --mode 1920x1200 --output ${secondary} --auto --right-of ${primary}
+	xrandr --output ${primary} --auto --output ${secondary} --auto --right-of ${primary}
 
 	nitrogen --restore 2>/dev/null
 elif [[ $1 = "off" ]]
