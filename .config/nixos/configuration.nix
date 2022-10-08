@@ -95,6 +95,7 @@
     gcc
     git
     gnupg
+    htop
     kitty
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
