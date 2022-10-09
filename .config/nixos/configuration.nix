@@ -61,7 +61,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # libvirt
+  # virtualisations
   virtualisation.libvirtd.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
