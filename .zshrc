@@ -24,9 +24,6 @@ unsetopt beep extendedglob nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 #export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/binary:$HOME/.config/emacs/bin
 #export EDITOR=vim
 #export QT_QPA_PLATFORMTHEME=qt5ct
