@@ -184,6 +184,8 @@
 
   services.fstrim.enable = true;
 
+  services.tumbler.enable = true;
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = false;
 
