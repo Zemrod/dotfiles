@@ -23,8 +23,8 @@
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   fileSystems = {
-    "/".options = [ "compress=zstd" ];
-    "/home".options = [ "compress=zstd" ];
+    "/".options = [ "defaults" "compress=zstd" ];
+    "/home".options = [ "defaults" "compress=zstd" ];
   };
 
   # Set your time zone.
