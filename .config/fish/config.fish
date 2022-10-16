@@ -44,6 +44,9 @@ alias cat='bat'
 # rustic ps replacement
 alias ps='procs'
 
+# backup into tarball
+alias backup='tar -czvf backup-$(date +%F).tar.gz'
+
 ### lolcate related aliases
 # query the music database
 set MUSIC_DB Music

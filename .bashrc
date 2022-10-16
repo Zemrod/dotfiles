@@ -33,9 +33,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias rsync='rsync -v'
 
-# zstd compression alias
-alias tarzstd='tar --zstd -cf'
-
 # ip colorization
 alias ip='ip -color=auto'
 
@@ -63,6 +60,9 @@ alias cat='bat'
 
 # rustic ps replacement
 alias ps='procs'
+
+# backup into a tarball
+alias backup='tar -czvf backup-$(date +%F).tar.gz'
 
 ### lolcate related aliases
 # query the music database
