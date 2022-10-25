@@ -1,9 +1,6 @@
 # restore wallpapers from previous session
 (sleep 2s && nitrogen --restore) &
 
-# enable multiscreen
-xrandr | grep connected | grep -v dis | grep -qv primary && xrandr --output eDP-1 --auto --output HDMI-1 --auto --right-of eDP1 &
-
 # load X resources
 xrdb ~/.Xresources
 
