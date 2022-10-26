@@ -142,26 +142,18 @@
     source-han-sans
   ];
 
-# nixpkgs.overlays = [
-#   (self: super: {
-#     qtile = super.qtile.overrideAttrs(oldAttrs: {
-#     pythonPath = oldAttrs.pythonPath ++ (with self.python39Packages; [
-#       gdk-pixbuf
-#       glibc
-#       libnotify
-#       pango
-#       librsvg
-#       cairocffi
-#       cffi
-#       xcffib
-#       pygobject3
-#       lm_sensors
-#       psutil
-#       setproctitle
-#    ]);
-#    });
-# })
-# ];
+ nixpkgs.overlays = [
+   (self: super: {
+      python3Packages = super.python3Packages.override {
+        overrides = pfinal: pprev: {
+          dbus-next = pprev.dbus-next.overridePythonAttrs (old: {
+            # temporary fix for https://github.com/NixOS/nixpkgs/issues/197408
+            checkPhase = builtins.replaceStrings ["not test_peer_interface"] ["not test_peer_interface and not test_tcp_connection_with_forwarding"] old.checkPhase;
+          });
+        };
+      };
+    })
+ ];
   
   programs.zsh = {
     enable = true;
