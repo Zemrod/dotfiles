@@ -127,12 +127,6 @@
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
-
-    # Python stuff
-    black
-    isort
-    nodePackages.pyright
-    python310Packages.pyflakes
   ];
 
   fonts.fonts = with pkgs; [
