@@ -115,8 +115,6 @@
     ripgrep
     rofi
     rsync
-    rust-analyzer
-    rustup
     starship
     topgrade
     vimHugeX
@@ -129,6 +127,12 @@
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
+
+    # Python stuff
+    black
+    isort
+    python-language-server
+    python310Packages.pyflakes
   ];
 
   fonts.fonts = with pkgs; [
