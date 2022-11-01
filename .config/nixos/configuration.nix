@@ -131,7 +131,7 @@
     # Python stuff
     black
     isort
-    python-language-server
+    nodePackages.pyright
     python310Packages.pyflakes
   ];
 
