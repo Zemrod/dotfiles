@@ -127,6 +127,10 @@
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
+
+    # lua packs
+    lua
+    sumneko-lua-language-server
   ];
 
   fonts.fonts = with pkgs; [

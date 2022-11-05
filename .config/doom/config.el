@@ -41,6 +41,10 @@
 ;; Setting the local leader to Backspace
 (setq doom-localleader-key "DEL")
 
+;; Find the lua language-server
+(setq lsp-clients-lua-language-server-bin
+      (locate-file "lua-language-server" exec-path))
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
