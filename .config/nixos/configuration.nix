@@ -17,7 +17,7 @@
   # prevent screen flicker on Tuxedo Infinitybook 14
   boot.kernelParams = [ "i915.enable_psr=0" ];
 
-  networking.hostName = "mizutsune"; # Define your hostname.
+  networking.hostName = "legiana"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
