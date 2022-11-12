@@ -115,7 +115,6 @@
     ripgrep
     rofi
     rsync
-    sbcl
     starship
     topgrade
     vimHugeX
