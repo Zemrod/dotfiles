@@ -39,6 +39,8 @@ bindkey -v
 # To add support for TTYs this line can be optionally added.
 # source ~/.cache/wal/colors-tty.sh
 
+fpath=($HOME/.zsh $fpath)
+
 source $HOME/.zsh/zsh_alias
 
 ### lolcate related aliases
