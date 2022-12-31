@@ -116,7 +116,6 @@
     rofi
     rsync
     starship
-    swift
     topgrade
     vimHugeX
     virt-manager
