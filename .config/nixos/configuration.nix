@@ -112,6 +112,7 @@
     procs
     pywal
     qtpass
+    remmina
     ripgrep
     rofi
     rsync
