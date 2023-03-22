@@ -130,16 +130,22 @@
     zsh-syntax-highlighting
   ];
 
-  fonts.fonts = with pkgs; [
-    dejavu_fonts
-    fira-code
-    font-awesome
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    source-han-code-jp
-    source-han-sans
-  ];
+  fonts = {
+    fontconfig = {
+      antialias = true;
+      hinting.enable = true;
+    };
+    fonts = with pkgs; [
+      dejavu_fonts
+      fira-code
+      font-awesome
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-emoji
+      source-han-code-jp
+      source-han-sans
+    ];
+  };
 
 # nixpkgs.overlays = [
 #   (self: super: {
