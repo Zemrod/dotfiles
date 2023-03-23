@@ -52,6 +52,7 @@
     layout = "de"; # X11-keymap
     libinput.enable = true; # touchpad
     displayManager.startx.enable = true;
+    dpi = 100;
   };
 
   # Enable CUPS to print documents.
@@ -131,6 +132,7 @@
   ];
 
   fonts = {
+    optimizeForVeryHighDPI = true;
     fontconfig = {
       antialias = true;
       hinting.enable = true;
