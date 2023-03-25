@@ -43,7 +43,10 @@
   };
 
   # Nix options
-  nix.settings.auto-optimise-store = true;
+  nix.settings = {
+    auto-optimise-store = true;
+    experimental-features = [ "nix-command" "flakes" ];
+  };
 
   # Enable the X11 windowing system.
   services.xserver = {
@@ -132,7 +135,6 @@
   ];
 
   fonts = {
-    optimizeForVeryHighDPI = true;
     fontconfig = {
       antialias = true;
       hinting.enable = true;
