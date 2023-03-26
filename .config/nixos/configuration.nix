@@ -120,6 +120,8 @@
     ripgrep
     rofi
     rsync
+    rust-analyzer
+    rustup
     starship
     topgrade
     vimHugeX
