@@ -55,6 +55,7 @@
     layout = "de"; # X11-keymap
     libinput.enable = true; # touchpad
     displayManager.startx.enable = true;
+    videoDrivers = [ "intel" ];
     dpi = 100;
   };
 

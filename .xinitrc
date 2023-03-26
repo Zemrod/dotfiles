@@ -39,7 +39,7 @@ fi
 xsetroot -cursor_name left_ptr
 
 # set screen resolution of internal and external screen
-xrandr --output eDP-1 --mode 1920x1200 --output HDMI-1 --auto --right-of eDP-1
+xrandr --output eDP1 --mode 1920x1200 --output HDMI1 --auto --right-of eDP1
 
 # Start qtile
 exec qtile start
