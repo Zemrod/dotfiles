@@ -126,6 +126,7 @@
     topgrade
     vimHugeX
     virt-manager
+    vscodium
     xclip
     xfce.ristretto
     xfce.thunar
