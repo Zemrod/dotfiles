@@ -36,10 +36,11 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 # default X Cursor
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr &
 
 # set screen resolution of internal and external screen
-xrandr --output eDP1 --mode 1920x1200 --output HDMI1 --auto --right-of eDP1
+(sleep 2s && xrandr --output eDP1 --mode 1920x1200) &
+xrandr --output HDMI1 --mode 1920x1080 --right-of eDP1 &
 
 # Start qtile
 exec qtile start
