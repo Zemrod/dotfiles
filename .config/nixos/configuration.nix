@@ -52,11 +52,13 @@
   services.xserver = {
     enable = true;
     windowManager.qtile.enable = true;
+    desktopManager.xterm.enable = false;
     layout = "de"; # X11-keymap
     libinput.enable = true; # touchpad
     displayManager.startx.enable = true;
     videoDrivers = [ "intel" ];
     dpi = 100;
+    excludePackages = [ pkgs.xterm ];
   };
 
   # Enable CUPS to print documents.
