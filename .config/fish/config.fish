@@ -11,7 +11,7 @@ alias la='ls --all'
 alias l='ls --group --classify --long --header'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias rsync='rsync -v'
+alias rsync='rsync -v --progress'
 
 # zstd compression alias
 alias tarzstd='tar --zstd -cf'
