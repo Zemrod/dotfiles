@@ -61,6 +61,11 @@
     excludePackages = [ pkgs.xterm ];
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "qt5ct";
+  };
+
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
@@ -104,7 +109,6 @@
     gnupg
     htop
     kitty
-    libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
     lxappearance
     lxde.lxsession

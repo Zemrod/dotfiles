@@ -6,7 +6,7 @@
 export PATH=$PATH:$HOME/.local/bin:$HOME/.local/bin/binary:$HOME/.config/emacs/bin
 
 export EDITOR=vim
-export QT_QPA_PLATFORMTHEME=qt5ct
+#export QT_QPA_PLATFORMTHEME=qt5ct
 
 # for nixos
 # export GTK2_RC_FILES=$HOME/.local/share/themes/dracula/gtk-2.0/gtkrc
