@@ -72,6 +72,7 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.bluetooth.enable = true;
 
   # virtualisations
   virtualisation.libvirtd.enable = true;
@@ -189,6 +190,8 @@
     enable = true;
     localuser = null;
   };
+
+  services.blueman.enable = true;
 
   services.fstrim.enable = true;
 
