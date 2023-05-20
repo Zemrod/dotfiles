@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -47,6 +47,10 @@
     auto-optimise-store = true;
     experimental-features = [ "nix-command" "flakes" ];
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "libsciter"
+  ];
 
   # Enable the X11 windowing system.
   services.xserver = {
@@ -128,6 +132,7 @@
     ripgrep
     rofi
     rsync
+    rustdesk
     starship
     topgrade
     vimHugeX
@@ -159,19 +164,6 @@
     ];
   };
 
-# nixpkgs.overlays = [
-#   (self: super: {
-#      python3Packages = super.python3Packages.override {
-#        overrides = pfinal: pprev: {
-#          dbus-next = pprev.dbus-next.overridePythonAttrs (old: {
-#            # temporary fix for https://github.com/NixOS/nixpkgs/issues/197408
-#            checkPhase = builtins.replaceStrings ["not test_peer_interface"] ["not test_peer_interface and not test_tcp_connection_with_forwarding"] old.checkPhase;
-#          });
-#        };
-#      };
-#    })
-# ];
-  
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;
