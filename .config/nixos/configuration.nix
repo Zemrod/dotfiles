@@ -48,10 +48,6 @@
     experimental-features = [ "nix-command" "flakes" ];
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "libsciter"
-  ];
-
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
@@ -71,7 +67,9 @@
   };
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
+  services.avahi.enable = true;
+  services.avahi.nssmdns = true;
 
   # Enable sound.
   sound.enable = true;
@@ -132,7 +130,6 @@
     ripgrep
     rofi
     rsync
-    rustdesk
     starship
     topgrade
     vimHugeX
