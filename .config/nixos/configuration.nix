@@ -22,6 +22,17 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
+  # Bridge config
+  networking.interfaces = {
+    enp0s20f0u4.useDHCP = true;
+    br0.useDHCP = true;
+  };
+  networking.bridges = {
+    "br0" = {
+      interfaces = [ "enp0s20f0u4" ];
+    };
+  };
+
   fileSystems = {
     "/".options = [ "defaults" "compress=zstd" ];
     "/home".options = [ "defaults" "compress=zstd" ];
