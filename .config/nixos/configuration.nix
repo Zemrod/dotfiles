@@ -17,7 +17,7 @@
   # prevent screen flicker on Tuxedo Infinitybook 14
   boot.kernelParams = [ "i915.enable_psr=0" ];
 
-  networking.hostName = "valkyrie"; # Define your hostname.
+  networking.hostName = "yamato"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -83,8 +83,17 @@
   services.avahi.nssmdns = true;
 
   # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  # sound.enable = true;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    #alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
+  # Enable bluetooth
+  # hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
 
   # virtualisations
