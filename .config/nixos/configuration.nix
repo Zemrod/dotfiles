@@ -84,6 +84,7 @@
 
   # Enable sound.
   # sound.enable = true;
+  # hardware.pulseaudio.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -93,7 +94,6 @@
   };
 
   # Enable bluetooth
-  # hardware.pulseaudio.enable = true;
   hardware.bluetooth.enable = true;
 
   # virtualisations
@@ -193,7 +193,7 @@
     pinentryFlavor = "gtk2";
   };
   
-  # List services that you want to enable:
+  # List of services that you want to enable:
   services.locate = {
     locate = pkgs.mlocate;
     enable = true;
