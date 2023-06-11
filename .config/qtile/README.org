@@ -47,7 +47,7 @@ The keybindings used for qtile.
 
 | IMPORTANT KEYBINDINGS | ACTION                                                 |
 |-----------------------+--------------------------------------------------------|
-| mod + return          | opens the primary terminal (in this example kitty) |
+| mod + return          | opens the primary terminal (in this example kitty)     |
 | mod + shift + return  | opens the alternative terminal (in this example st)    |
 | mod + q               | restarts qtile                                         |
 | mod + shift + q       | quits qtile                                            |
