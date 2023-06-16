@@ -18,20 +18,21 @@
   boot.kernelParams = [ "i915.enable_psr=0" ];
 
   networking.hostName = "yamato"; # Define your hostname.
+  networking.domain = "kai.ni"; # Define your domain
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Bridge config
-  networking.interfaces = {
-    enp0s20f0u4.useDHCP = true;
-    br0.useDHCP = true;
-  };
-  networking.bridges = {
-    "br0" = {
-      interfaces = [ "enp0s20f0u4" ];
-    };
-  };
+  # networking.interfaces = {
+  #   enp0s20f0u4.useDHCP = true;
+  #   br0.useDHCP = true;
+  # };
+  # networking.bridges = {
+  #   "br0" = {
+  #     interfaces = [ "enp0s20f0u4" ];
+  #   };
+  # };
 
   fileSystems = {
     "/".options = [ "defaults" "compress=zstd" ];
