@@ -17,7 +17,7 @@
   # prevent screen flicker on Tuxedo Infinitybook 14
   boot.kernelParams = [ "i915.enable_psr=0" ];
 
-  networking.hostName = "yamato"; # Define your hostname.
+  networking.hostName = "musashi"; # Define your hostname.
   networking.domain = "kai.ni"; # Define your domain
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
