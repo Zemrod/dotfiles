@@ -83,6 +83,10 @@
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
 
+  # Enable scanning
+  hardware.sane.enable = true;
+  hardware.sane.extraBackends = [ pkgs.sane-airscan ];
+
   # Enable sound.
   # sound.enable = true;
   # hardware.pulseaudio.enable = true;
@@ -106,6 +110,8 @@
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user.
       "libvirtd" # Allow usage of libvirt without extra authentication.
+      "scanner"
+      "lp"
     ];
     shell = pkgs.zsh;
   #   packages = with pkgs; [
