@@ -12,5 +12,4 @@ echo "DNS.1 = $1" | tee -a $ext_file
 
 [ ! -f "$1.key" ] && openssl genrsa -out $1.key 2048
 openssl req -new -key $1.key -out $1.csr
-openssl req -new -key $1.key -out $1.csr
-openssl x509 -req -in $1.csr -CA internalCA.pem -CAkey internalCA.key -CAcreateserial -out $1.crt -days 825 -sha256 -extfile $ext_file 
+openssl x509 -req -in $1.csr -CA internalCA.pem -CAkey internalCA.key -CAcreateserial -out $1.crt -days 825 -sha256 -extfile $ext_file
