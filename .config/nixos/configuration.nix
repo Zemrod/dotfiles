@@ -176,7 +176,7 @@
       antialias = true;
       hinting.enable = true;
     };
-    fonts = with pkgs; [
+    packages = with pkgs; [
       dejavu_fonts
       fira-code
       font-awesome
