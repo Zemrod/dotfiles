@@ -153,16 +153,16 @@ extension_defaults = widget_defaults.copy()
 screen1 = Screen(
     top=bar.Bar(
         [
-#            widget.Image(
-#                filename="~/.config/qtile/icons/arch.svg",
-#            ),
+            #widget.Image(
+            #    filename="~/.config/qtile/icons/arch.svg",
+            #),
             widget.GroupBox(active=colors.color1, inactive=colors.color5,
                             this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
             widget.Sep(foreground=colors.color5),
             widget.Prompt(foreground=colors.color1),
             widget.Memory(foreground=colors.color1),
-            widget.Sep(foreground=colors.color5),
-            widget.Net(foreground=colors.color1, interface="enp0s20f0u4u2c2"),
+            #widget.Sep(foreground=colors.color5),
+            #widget.Net(foreground=colors.color1, interface="enp0s20f0u4u2c2"),
             widget.Chord(
                 chords_colors={
                     'launch': ("#ff0000", "#ffffff"),
@@ -175,9 +175,9 @@ screen1 = Screen(
             widget.Sep(foreground=colors.color5),
             widget.Battery(foreground=colors.color1, update_interval=10),
             widget.Sep(foreground=colors.color5),
-          # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
-          #                    foreground=colors.color1),
-          # widget.Sep(foreground=colors.color5),
+            #widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
+            #                   foreground=colors.color1),
+            #widget.Sep(foreground=colors.color5),
             widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
                                foreground=colors.color1),
             widget.Sep(foreground=colors.color5),
@@ -194,16 +194,16 @@ screen1 = Screen(
 screen2 = Screen(
     top=bar.Bar(
         [
-#            widget.Image(
-#                filename="~/.config/qtile/icons/arch.svg",
-#            ),
+            #widget.Image(
+            #    filename="~/.config/qtile/icons/arch.svg",
+            #),
             widget.GroupBox(active=colors.color1, inactive=colors.color5,
                             this_current_screen_border=colors.color2, this_screen_border=colors.color5, hide_unused=False),
             widget.Sep(foreground=colors.color5),
             widget.Prompt(),
             widget.Memory(foreground=colors.color1),
-            widget.Sep(foreground=colors.color5),
-            widget.Net(foreground=colors.color1, interface="enp0s20f0u4u2c2"),
+            #widget.Sep(foreground=colors.color5),
+            #widget.Net(foreground=colors.color1, interface="enp0s20f0u4u2c2"),
             widget.Chord(
                 chords_colors={
                     'launch': ("#ff0000", "#ffffff"),
@@ -214,9 +214,9 @@ screen2 = Screen(
             widget.GenPollText(func=lambda: subprocess.check_output("syspart.sh").decode("utf-8"), update_interval=10,
                                foreground=colors.color1),
             widget.Sep(foreground=colors.color5),
-          # widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
-          #                    foreground=colors.color1),
-          # widget.Sep(foreground=colors.color5),
+            #widget.GenPollText(func=lambda: subprocess.check_output("ip.sh").decode("utf-8"), update_interval=100,
+            #                   foreground=colors.color1),
+            #widget.Sep(foreground=colors.color5),
             widget.GenPollText(func=lambda: subprocess.check_output("kernel.sh").decode("utf-8"), update_interval=1000,
                                foreground=colors.color1),
             widget.Sep(foreground=colors.color5),
