@@ -60,10 +60,21 @@
     experimental-features = [ "nix-command" "flakes" ];
   };
 
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      stable = import <stable> {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
+
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    windowManager.qtile.enable = true;
+    windowManager.qtile = {
+      enable = true;
+      package = pkgs.stable.qtile;
+    };
     desktopManager.xterm.enable = false;
     layout = "de"; # X11-keymap
     libinput.enable = true; # touchpad
