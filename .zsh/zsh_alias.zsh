@@ -1,5 +1,5 @@
 # Useful Aliases (Colorization and shortcuts)
-alias ls='exa --color=auto --group-directories-first --git'
+alias ls='eza --color=auto --group-directories-first --git'
 alias ll='ls --group --all --all --classify --long --header'
 alias la='ls --all'
 alias l='ls --group --classify --long --header'

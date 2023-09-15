@@ -39,7 +39,7 @@ bindkey -v
 # To add support for TTYs this line can be optionally added.
 # source ~/.cache/wal/colors-tty.sh
 
-source $HOME/.zsh/zsh_alias
+source $HOME/.zsh/zsh_alias.zsh
 
 ### lolcate related aliases
 # query the music database

@@ -142,7 +142,7 @@
     dracula-theme
     du-dust
     emacs
-    exa
+    eza
     fd
     flameshot
     gcc
