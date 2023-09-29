@@ -157,6 +157,9 @@
     networkmanagerapplet
     nitrogen
     nix-zsh-completions
+    numix-cursor-theme
+    numix-gtk-theme
+    numix-icon-theme
     pass
     pavucontrol
     picom
