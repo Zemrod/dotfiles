@@ -66,7 +66,15 @@
         config = config.nixpkgs.config;
       };
     };
+    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "steam"
+      "steam-original"
+      "steam-run"
+    ];
   };
+
+  # install steam
+  programs.steam.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver = {
@@ -216,7 +224,7 @@
   
   # List of services that you want to enable:
   services.locate = {
-    locate = pkgs.mlocate;
+    package = pkgs.mlocate;
     enable = true;
     localuser = null;
   };
