@@ -93,7 +93,7 @@ group_names = [
     "DEV",
     "WEB",
     "VIRT",
-    "MAIL",
+    "RDP",
     "CHAT",
     "ETC"
 ]
