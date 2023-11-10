@@ -147,7 +147,6 @@
     brave
     coreutils
     curl
-    dracula-theme
     du-dust
     emacs
     eza
