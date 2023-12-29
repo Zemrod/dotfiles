@@ -51,8 +51,6 @@ keys = [
 
     Key([mod],          "d", lazy.spawn("emacsclient -c -a emacs"), desc="Launch emacs"),
 
-    Key([mod],          "e", lazy.spawn("thunar"), desc='Launch Thunar'),
-
     Key([mod],          "c", lazy.spawn("codium"), desc="Launch VSCodium"),
 
     Key([mod, "shift"], "d", lazy.spawn("discord"), desc="Launch Discord"),
