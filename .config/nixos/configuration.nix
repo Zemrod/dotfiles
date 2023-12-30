@@ -145,6 +145,7 @@
     bat
     beauty-line-icon-theme
     brave
+    btop
     coreutils
     curl
     du-dust
@@ -218,7 +219,7 @@
 
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "gtk2";
+    pinentryFlavor = "qt";
   };
   
   # List of services that you want to enable:
