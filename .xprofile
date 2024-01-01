@@ -4,7 +4,7 @@ sleep 2s
 screen.sh on
 
 # restore wallpapers from previous session
-(sleep 2s && nitrogen --restore) &
+#(sleep 2s && ./.fehbg) &
 
 # load X resources
 xrdb ~/.Xresources

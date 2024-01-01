@@ -156,6 +156,7 @@
     gcc
     git
     gnupg
+    feh
     htop
     kitty
     libsForQt5.qtstyleplugin-kvantum
@@ -163,7 +164,6 @@
     lxde.lxsession
     neofetch
     networkmanagerapplet
-    nitrogen
     nix-zsh-completions
     numix-cursor-theme
     numix-gtk-theme

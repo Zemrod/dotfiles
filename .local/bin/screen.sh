@@ -9,8 +9,10 @@ if [[ $1 = "on" ]]
 then
 	xrandr --output eDP1 --off --output ${primary} --auto --output ${secondary} --auto --right-of ${primary}
 
-	nitrogen --restore 2>/dev/null
+	$HOME/.fehbg
 elif [[ $1 = "off" ]]
 then
 	xrandr --output ${secondary} --off --output ${primary} --off --output eDP1 --mode 1920x1200
+
+	$HOME/.fehbg
 fi
