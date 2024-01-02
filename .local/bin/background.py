@@ -9,13 +9,6 @@ from os.path import isfile, join, expanduser, isdir
 def filter(string, substring):
     return [s for s in string if any(sub in s.lower() for sub in substring)]
 
-retfeh = subprocess.run("feh --version", shell=True)
-retwal = subprocess.run("wal -v", shell=True)
-
-if retfeh.returncode != 0 or retwal.returncode != 0:
-    print("pywal or feh are missing")
-    exit()
-
 
 home = expanduser("~")
 fixpath = home + "/nextcloud-backup/Wallpaper"
