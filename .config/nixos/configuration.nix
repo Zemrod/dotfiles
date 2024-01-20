@@ -118,7 +118,7 @@
   };
 
   # Enable bluetooth
-  hardware.bluetooth.enable = true;
+  # hardware.bluetooth.enable = true;
 
   # virtualisations
   virtualisation.libvirtd.enable = true;
@@ -152,11 +152,11 @@
     emacs
     eza
     fd
+    feh
     flameshot
     gcc
     git
     gnupg
-    feh
     htop
     kitty
     libsForQt5.qtstyleplugin-kvantum
@@ -169,6 +169,7 @@
     numix-gtk-theme
     numix-icon-theme
     pass
+    pasystray
     pavucontrol
     picom
     powerline
@@ -229,7 +230,7 @@
     localuser = null;
   };
 
-  services.blueman.enable = true;
+  # services.blueman.enable = true;
 
   services.fstrim.enable = true;
 
