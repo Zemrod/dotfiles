@@ -84,7 +84,7 @@
       package = pkgs.stable.qtile;
     };
     desktopManager.xterm.enable = false;
-    layout = "de"; # X11-keymap
+    xkb.layout = "de"; # X11-keymap
     libinput.enable = true; # touchpad
     displayManager.startx.enable = true;
     videoDrivers = [ "intel" ];
