@@ -67,6 +67,7 @@
       };
     };
     allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "discord"
       "steam"
       "steam-original"
       "steam-run"
@@ -148,6 +149,7 @@
     btop
     coreutils
     curl
+    discord
     du-dust
     emacs
     eza
@@ -171,6 +173,7 @@
     pass
     pasystray
     pavucontrol
+    pcmanfm
     picom
     powerline
     procs
@@ -186,7 +189,6 @@
     virt-manager
     xclip
     xfce.ristretto
-    xfce.thunar
     yt-dlp
     zsh
     zsh-autosuggestions
@@ -235,6 +237,8 @@
   services.fstrim.enable = true;
 
   services.tumbler.enable = true;
+
+  services.gvfs.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = false;
