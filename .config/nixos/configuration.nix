@@ -67,7 +67,6 @@
       };
     };
     allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-      "discord"
       "steam"
       "steam-original"
       "steam-run"
@@ -149,7 +148,6 @@
     btop
     coreutils
     curl
-    discord
     du-dust
     emacs
     eza
@@ -185,6 +183,7 @@
     rsync
     starship
     topgrade
+    vesktop
     vimHugeX
     virt-manager
     xclip
