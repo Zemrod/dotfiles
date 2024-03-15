@@ -221,7 +221,7 @@
 
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "qt";
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
   
   # List of services that you want to enable:
