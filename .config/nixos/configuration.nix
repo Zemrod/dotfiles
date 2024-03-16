@@ -15,9 +15,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # prevent screen flicker on Tuxedo Infinitybook 14
-  boot.kernelParams = [ "i915.enable_psr=0" ];
+  boot.kernelParams = [ "i915.enable_psr=0" "amdgpu" ];
 
-  networking.hostName = "musashi"; # Define your hostname.
+  networking.hostName = "mutsu"; # Define your hostname.
   networking.domain = "kai.ni"; # Define your domain
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -87,7 +87,7 @@
     xkb.layout = "de"; # X11-keymap
     libinput.enable = true; # touchpad
     displayManager.startx.enable = true;
-    videoDrivers = [ "intel" ];
+    videoDrivers = [ "amdgpu" ];
     dpi = 100;
     excludePackages = [ pkgs.xterm ];
   };
@@ -105,6 +105,15 @@
   # Enable scanning
   hardware.sane.enable = true;
   hardware.sane.extraBackends = [ pkgs.sane-airscan ];
+
+  # AMD Vulkan Driver
+  hardware.opengl.extraPackages = with pkgs; [
+    amdvlk
+  ];
+  # For 32 bit applications 
+  hardware.opengl.extraPackages32 = with pkgs; [
+    driversi686Linux.amdvlk
+  ];
 
   # Enable sound.
   # sound.enable = true;
