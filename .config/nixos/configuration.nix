@@ -154,7 +154,6 @@
     bat
     beauty-line-icon-theme
     brave
-    btop
     coreutils
     curl
     du-dust
